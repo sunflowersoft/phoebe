@@ -1,0 +1,2018 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: Applied Econometrics at the University of Illinois: e-Tutorial 5: Akaike and Schwarz Information Criteria
+Date: Sun, 4 Mar 2012 14:34:01 +0700
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_000E_01CCFA13.D7A85E40"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16385
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_000E_01CCFA13.D7A85E40
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.econ.uiuc.edu/~econ472/tutorial5.html
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML xmlns=3D"http://www.w3.org/TR/REC-html40" xmlns:v =3D=20
+"urn:schemas-microsoft-com:vml" xmlns:o =3D=20
+"urn:schemas-microsoft-com:office:office" xmlns:w =3D=20
+"urn:schemas-microsoft-com:office:word"><HEAD><TITLE>Applied =
+Econometrics at the University of Illinois: e-Tutorial 5: Akaike and =
+Schwarz Information Criteria</TITLE>
+<META content=3D"text/html; charset=3Dutf-8" http-equiv=3DContent-Type>
+<META name=3DProgId content=3DWord.Document>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16385">
+<META name=3DOriginator content=3D"Microsoft Word 9"><LINK =
+rel=3DFile-List=20
+href=3D"./tutorial5_files/filelist.xml"><LINK rel=3DEdit-Time-Data=20
+href=3D"./tutorial5_files/editdata.mso"><!--[if !mso]>
+<STYLE>v\:* {
+	BEHAVIOR: url(#default#VML)
+}
+o\:* {
+	BEHAVIOR: url(#default#VML)
+}
+w\:* {
+	BEHAVIOR: url(#default#VML)
+}
+.shape {
+	BEHAVIOR: url(#default#VML)
+}
+</STYLE>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Antonio</o:Author>
+  <o:LastAuthor>Antonio</o:LastAuthor>
+  <o:Revision>14</o:Revision>
+  <o:TotalTime>13</o:TotalTime>
+  <o:Created>2006-09-04T02:15:00Z</o:Created>
+  <o:LastSaved>2006-09-05T00:13:00Z</o:LastSaved>
+  <o:Pages>4</o:Pages>
+  <o:Words>2595</o:Words>
+  <o:Characters>14793</o:Characters>
+  <o:Company>UIUC</o:Company>
+  <o:Lines>123</o:Lines>
+  <o:Paragraphs>29</o:Paragraphs>
+  <o:CharactersWithSpaces>18166</o:CharactersWithSpaces>
+  <o:Version>9.2720</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+<STYLE>@font-face {
+	font-family: Garamond;
+}
+@page Section1 {size: 8.5in 11.0in; margin: 1.0in 1.25in 1.0in 1.25in; =
+mso-header-margin: .5in; mso-footer-margin: .5in; mso-paper-source: 0; }
+P.MsoNormal {
+	MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; =
+mso-style-parent: ""; mso-pagination: widow-orphan; =
+mso-fareast-font-family: "Times New Roman"
+}
+LI.MsoNormal {
+	MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; =
+mso-style-parent: ""; mso-pagination: widow-orphan; =
+mso-fareast-font-family: "Times New Roman"
+}
+DIV.MsoNormal {
+	MARGIN: 0in 0in 0pt; FONT-FAMILY: "Times New Roman"; FONT-SIZE: 12pt; =
+mso-style-parent: ""; mso-pagination: widow-orphan; =
+mso-fareast-font-family: "Times New Roman"
+}
+A:link {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlink {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+A:visited {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+SPAN.MsoHyperlinkFollowed {
+	COLOR: blue; TEXT-DECORATION: underline; text-underline: single
+}
+P {
+	FONT-FAMILY: "Times New Roman"; MARGIN-LEFT: 0in; FONT-SIZE: 12pt; =
+MARGIN-RIGHT: 0in; mso-pagination: widow-orphan; =
+mso-fareast-font-family: "Times New Roman"; mso-margin-top-alt: auto; =
+mso-margin-bottom-alt: auto
+}
+DIV.Section1 {
+	page: Section1
+}
+</STYLE>
+<!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext=3D"edit" spidmax=3D"1027"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext=3D"edit">
+  <o:idmap v:ext=3D"edit" data=3D"1"/>
+ </o:shapelayout></xml><![endif]-->
+<META name=3DAuthor content=3D"Roberto Perrelli">
+<META name=3DDescription=20
+content=3D"UIUC Econometrics Group: Econ 472 Applied Econometrics, =
+Professor Roger Koenker, Teaching Assistant Roberto Perrelli">
+<META name=3DKeyWords=20
+content=3D"Applied Econometrics, Econometrics Group, Roger Koenker, =
+Roberto Perrelli"></HEAD>
+<BODY style=3D"tab-interval: .5in" lang=3DEN-US=20
+background=3Dhttp://www.econ.uiuc.edu/~econ472/back21.gif link=3Dblue =
+bgColor=3Dwhite=20
+vLink=3Dblue><!--[if gte mso 9]><xml>
+ <v:background id=3D"_x0000_s1025" o:bwmode=3D"white">
+  <v:fill src=3D"back21.gif" type=3D"tile"/>
+ </v:background></xml><![endif]-->
+<DIV class=3DSection1>
+<P class=3DMsoNormal>&nbsp; <o:p></o:p></P>
+<DIV align=3Dcenter>
+<TABLE=20
+style=3D"WIDTH: 507pt; mso-cellspacing: 1.5pt; mso-padding-alt: 0in 0in =
+0in 0in"=20
+border=3D0 cellPadding=3D0 width=3D676 height=3D92>
+  <TBODY>
+  <TR style=3D"HEIGHT: 45pt">
+    <TD=20
+    style=3D"PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; WIDTH: 501pt; =
+PADDING-RIGHT: 0.75pt; HEIGHT: 45pt; PADDING-TOP: 0.75pt"=20
+    width=3D668>
+      <DIV align=3Dcenter>
+      <TABLE=20
+      style=3D"WIDTH: 100%; mso-cellspacing: 1.5pt; mso-padding-alt: 0in =
+0in 0in 0in"=20
+      border=3D0 cellPadding=3D0 width=3D"100%">
+        <TBODY>
+        <TR>
+          <TD=20
+          style=3D"PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; WIDTH: =
+5%; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt"=20
+          width=3D"5%">
+            <P class=3DMsoNormal><A href=3D"http://www.uiuc.edu/"><SPAN=20
+            style=3D"TEXT-DECORATION: none; text-underline: none"><IMG=20
+            id=3D_x0000_i1025 border=3D0=20
+            =
+src=3D"http://www.econ.uiuc.edu/~econ472/vsmltraditional.gif" width=3D37 =
+
+            height=3D48></SPAN></A><o:p></o:p></P></TD>
+          <TD=20
+          style=3D"PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; WIDTH: =
+16%; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt"=20
+          background=3Dhttp://www.econ.uiuc.edu/~econ472/lines.gif =
+width=3D"16%">
+            <P style=3D"TEXT-ALIGN: center" class=3DMsoNormal =
+align=3Dcenter><SPAN=20
+            style=3D"COLOR: white; FONT-SIZE: 18pt">E</SPAN><SPAN=20
+            style=3D"COLOR: white; FONT-SIZE: 13.5pt">con=20
+          508</SPAN><o:p></o:p></P></TD>
+          <TD=20
+          style=3D"PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; WIDTH: =
+79%; PADDING-RIGHT: 0.75pt; PADDING-TOP: 0.75pt"=20
+          background=3Dhttp://www.econ.uiuc.edu/~econ472/lines.gif =
+width=3D"79%">
+            <P style=3D"TEXT-ALIGN: center" class=3DMsoNormal =
+align=3Dcenter><SPAN=20
+            style=3D"COLOR: white; FONT-SIZE: 24pt">E</SPAN><SPAN=20
+            style=3D"COLOR: white; FONT-SIZE: 18pt">conometrics =
+</SPAN><SPAN=20
+            style=3D"COLOR: white; FONT-SIZE: 24pt">G</SPAN><SPAN=20
+            style=3D"COLOR: white; FONT-SIZE: =
+18pt">roup</SPAN></P></TD></TR>
+        <TR>
+          <TD=20
+          style=3D"PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; WIDTH: =
+100%; PADDING-RIGHT: 0.75pt; BACKGROUND: #cccccc; PADDING-TOP: 0.75pt"=20
+          width=3D"100%" colSpan=3D3>
+            <P style=3D"TEXT-ALIGN: center" class=3DMsoNormal =
+align=3Dcenter><SPAN=20
+            style=3D"COLOR: #090251; FONT-SIZE: 10pt"><A=20
+            href=3D"http://www.econ.uiuc.edu/">Home</A> | <A=20
+            =
+href=3D"http://www.econ.uiuc.edu/~roger/faculty.html">Faculty</A> | <A=20
+            =
+href=3D"http://www.econ.uiuc.edu/~roger/students.html">Students</A> |=20
+            <A =
+href=3D"http://www.econ.uiuc.edu/~roger/alumni.html">Alumni</A> |=20
+            <A =
+href=3D"http://www.econ.uiuc.edu/~roger/courses.html">Courses</A> |=20
+            <A=20
+            =
+href=3D"http://www.econ.uiuc.edu/~roger/research/home.html">Research</A> =
+
+            | <A=20
+            =
+href=3D"http://www.econ.uiuc.edu/~roger/repro.html">Reproducibility</A>=20
+            | <A =
+href=3D"http://www.econ.uiuc.edu/~roger/lab/eclab.html">Lab</A> |=20
+            <A =
+href=3D"http://www.econ.uiuc.edu/~roger/seminar.html">Seminars</A>=20
+            | <A =
+href=3D"http://www.cba.uiuc.edu/economics">Economics</A> | <A=20
+            href=3D"http://www.stat.uiuc.edu/">Statistics</A> | <A=20
+            =
+href=3D"http://www.econ.uiuc.edu/~roger/fame.html">Fame</A></SPAN></P></T=
+D></TR></TBODY></TABLE></DIV>
+      <P style=3D"TEXT-ALIGN: center" class=3DMsoNormal=20
+    align=3Dcenter><o:p></o:p></P></TD></TR>
+  <TR style=3D"HEIGHT: 71.25pt">
+    <TD=20
+    style=3D"PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; WIDTH: 501pt; =
+PADDING-RIGHT: 0.75pt; HEIGHT: 71.25pt; PADDING-TOP: 0.75pt"=20
+    width=3D668>
+      <P style=3D"TEXT-ALIGN: center" class=3DMsoNormal =
+align=3Dcenter><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+36pt">A</SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+24pt">pplied=20
+      </SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+36pt">E</SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+24pt">conometrics</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+24pt">E</SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+18pt">con 508 -=20
+      </SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+24pt">F</SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+18pt">all=20
+      2007</SPAN> </P>
+      <P style=3D"TEXT-ALIGN: center" align=3Dcenter><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+24pt">e-T</SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+18pt">utorial=20
+      </SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+24pt">5</SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: 18pt">: =
+
+      </SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+24pt">A</SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+18pt">kaike and=20
+      </SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+24pt">S</SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+18pt">chwarz=20
+      </SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+24pt">I</SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+18pt">nformation=20
+      </SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+24pt">C</SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+18pt">riteria</SPAN></P></TD></TR>
+  <TR style=3D"HEIGHT: 0.75pt">
+    <TD=20
+    style=3D"PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; WIDTH: 501pt; =
+PADDING-RIGHT: 0.75pt; HEIGHT: 0.75pt; PADDING-TOP: 0.75pt"=20
+    width=3D668>
+      <P style=3D"TEXT-ALIGN: center; mso-line-height-alt: .75pt" =
+class=3DMsoNormal=20
+      align=3Dcenter><IMG id=3D_x0000_i1026 border=3D0=20
+      src=3D"http://www.econ.uiuc.edu/~econ472/newbar.gif" width=3D669=20
+    height=3D5></P></TD></TR>
+  <TR style=3D"HEIGHT: 17.25pt">
+    <TD=20
+    style=3D"PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; WIDTH: 492pt; =
+PADDING-RIGHT: 0.75pt; HEIGHT: 17.25pt; PADDING-TOP: 0.75pt"=20
+    width=3D656>
+      <P class=3DMsoNormal><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #000066; FONT-SIZE: =
+18pt">W</SPAN><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #000066">elcome to the =
+fifth issue of=20
+      e-Tutorial, the on-line help to Econ 508. This issue provides an=20
+      introduction to model selection in Econometrics, focusing on =
+Akaike (AIC)=20
+      and Schwarz (SIC) Information Criteria.&nbsp;</SPAN> <BR>&nbsp; =
+</P>
+      <P><B><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">Data=20
+      Set:</SPAN></B> <BR><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #000066">The data set used =
+in this=20
+      tutorial was borrowed from Johnston and DiNardo's <I>Econometric=20
+      Methods</I> (1997, 4th ed), but slightly adjusted for your needs. =
+It is=20
+      called AUTO2 and it is already in STATA format. You can download =
+the data=20
+      by clicking <A =
+href=3D"http://www.econ.uiuc.edu/~econ472/AUTO2.DTA">here</A>=20
+      or simply visiting the <A=20
+      href=3D"http://www.econ.uiuc.edu/~econ472/ec472.html">Econ 508 web =
+site</A>=20
+      (<A =
+href=3D"http://www.econ.uiuc.edu/~econ472/data.html">Data</A>). As you=20
+      will see, this adapted data set contains five series, =
+namely:&nbsp;</SPAN>=20
+      </P>
+      <P><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">quarter=20
+      Quarter of the observation (from 1959.1 to 1990.4)</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">gas&nbsp;&nbsp;&nbsp;&nbsp;=20
+      Log of per capita real expenditure on gasoline and oil</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">price&nbsp;&nbsp;=20
+      Log of the real price of gasoline and oil</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">income&nbsp;=20
+      Log of per capita real disposable income</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">miles&nbsp;&nbsp;=20
+      Log of miles per gallon</SPAN> <BR>&nbsp; </P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #000066">Transforming&nbsp; =
+the Data=20
+      in Time Series Format:</SPAN></B> <BR><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #000066">The next step is =
+to create=20
+      the variables you will need to run dynamic models. As mentioned =
+before,=20
+      you need to generate a variable corresponding to the time period =
+of each=20
+      observation (which can not be ?quarter? because it contains =
+non-integer=20
+      values):</SPAN> </P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">gen=20
+      t=3D_n</SPAN></B> <BR><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">label=20
+      variable t "Integer time period"</SPAN></B> </P>
+      <P><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">Next you =
+"tsset"=20
+      your data using the created variable:</SPAN> <BR><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">tsset=20
+      t</SPAN></B> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      time variable:&nbsp; t, 1 to 128</SPAN> <BR>&nbsp; </P>
+      <P><B><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: =
+#000066">Running a=20
+      Generic Dynamic Model:</SPAN></B> <BR><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #000066">In the PS2, =
+question 1, for=20
+      that specific data set (which is different than the one used here) =
+you are=20
+      asked to run a simple dynamic model in the following =
+autorregressive=20
+      distributed lag form:</SPAN> </P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">gas =3D=20
+      a<SUB>0 </SUB>+ a<SUB>1 </SUB>L.gas + a<SUB>2 </SUB>LD.gas + =
+a<SUB>3=20
+      </SUB>price + a<SUB>4 </SUB>D.price + a<SUB>5 </SUB>DL.price=20
+      +&nbsp;</SPAN></B> <BR><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">a<SUB>6=20
+      </SUB>income&nbsp;&nbsp;&nbsp; +&nbsp;&nbsp;&nbsp; a<SUB>7=20
+      </SUB>D.income&nbsp; +&nbsp; a<SUB>8 </SUB>DL.income +&nbsp;=20
+      error</SPAN></B> </P>
+      <P><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">In STATA, =
+you can=20
+      run this model as follows:</SPAN> </P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">regress&nbsp;=20
+      gas&nbsp; L.gas LD.gas&nbsp; price&nbsp; D.price&nbsp; =
+LD.price&nbsp;=20
+      income&nbsp; D.income&nbsp; LD.income</SPAN></B> </P>
+      <P><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">And the =
+output for=20
+      the data set used here (auto2.dta) will be:</SPAN> </P>
+      <P><SPAN style=3D"COLOR: #000066">&nbsp;</SPAN><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">=20
+      Source |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      SS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      df&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      =
+MS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      Number of obs =3D&nbsp;&nbsp;&nbsp;&nbsp; 126</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">---------+------------------------------&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      F(&nbsp; 8,&nbsp;&nbsp; 117) =3D&nbsp; 863.16</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;=20
+      Model |&nbsp; 1.67892182&nbsp;&nbsp;&nbsp;&nbsp; 8&nbsp;=20
+      =
+.209865228&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;=20
+      Prob &gt; F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =3D&nbsp; 0.0000</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">Residual=20
+      |&nbsp; .028446793&nbsp;&nbsp; 117&nbsp;=20
+      =
+.000243135&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;=20
+      R-squared&nbsp;&nbsp;&nbsp;&nbsp; =3D&nbsp; 0.9833</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">---------+------------------------------&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      Adj R-squared =3D&nbsp; 0.9822</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;=20
+      Total |&nbsp; 1.70736862&nbsp;&nbsp; 125&nbsp;=20
+      =
+.013658949&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;&nbsp;=20
+      Root MSE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =3D&nbsp; .01559</SPAN> =
+</P>
+      <P><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">-------------------------------------------------------------------=
+-----------</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">gas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Coef.&nbsp;&nbsp; Std.=20
+      Err.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t&nbsp;&nbsp;&nbsp;&nbsp; =
+
+      P&gt;|t|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [95% Conf. =
+Interval]</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">---------+---------------------------------------------------------=
+-----------</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">gas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      |</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      L1 |&nbsp;&nbsp; .9721906&nbsp;&nbsp; =
+.0254024&nbsp;&nbsp;&nbsp;&nbsp;=20
+      38.272&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      .9218825&nbsp;&nbsp;&nbsp; 1.022499</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      LD |&nbsp; -.1788088&nbsp;&nbsp; .0907299&nbsp;&nbsp;&nbsp;&nbsp;=20
+      -1.971&nbsp;&nbsp; 0.051&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      -.3584947&nbsp;&nbsp;&nbsp; .0008771</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">price&nbsp;&nbsp;&nbsp;=20
+      |</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      -- |&nbsp; -.0183001&nbsp;&nbsp; .0096211&nbsp;&nbsp;&nbsp;&nbsp;=20
+      -1.902&nbsp;&nbsp; 0.060&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      -.0373542&nbsp;&nbsp;&nbsp;&nbsp; .000754</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      D1 |&nbsp; -.2359339&nbsp;&nbsp; .0373382&nbsp;&nbsp;&nbsp;&nbsp;=20
+      -6.319&nbsp;&nbsp; 0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      -.3098801&nbsp;&nbsp; -.1619876</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      LD |&nbsp;&nbsp; .0584094&nbsp;&nbsp;=20
+      .0445919&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.310&nbsp;&nbsp;=20
+      0.193&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -.0299024&nbsp;&nbsp;&nbsp;=20
+      .1467213</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">income&nbsp;&nbsp;=20
+      |</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      -- |&nbsp;&nbsp; .0082806&nbsp;&nbsp;=20
+      .0205162&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.404&nbsp;&nbsp;=20
+      0.687&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -.0323507&nbsp;&nbsp;&nbsp;=20
+      .0489119</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      D1 |&nbsp;&nbsp; .2722332&nbsp;&nbsp;=20
+      .1549735&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.757&nbsp;&nbsp;=20
+      0.082&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -.0346836&nbsp;&nbsp;&nbsp;=20
+      .5791501</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      LD |&nbsp;&nbsp; .0446936&nbsp;&nbsp;=20
+      .1552938&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0.288&nbsp;&nbsp;=20
+      0.774&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -.2628576&nbsp;&nbsp;&nbsp;=20
+      .3522449</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">_cons&nbsp;&nbsp;&nbsp;=20
+      |&nbsp; -.0929674&nbsp;&nbsp;&nbsp;&nbsp; =
+.12155&nbsp;&nbsp;&nbsp;&nbsp;=20
+      -0.765&nbsp;&nbsp; 0.446&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      -.3336909&nbsp;&nbsp;&nbsp; .1477561</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">-------------------------------------------------------------------=
+-----------</SPAN>=20
+      <BR>&nbsp; </P>
+      <P><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">The model =
+above is=20
+      your <I>benchmark</I>. You should now start your model selection=20
+      process.&nbsp;</SPAN> </P>
+      <P><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">Even when =
+there=20
+      exist commands to calculate the Akaike or the Schwarz criterion, =
+in Econ=20
+      508 it is recommended that you compute them by hand, as taught in =
+class,=20
+      using the formulae given in Prof. Koenker's Lecture Note 4, page =
+3, or the=20
+      ones provided by Johnston and DiNardo (1997, p. 74).&nbsp;</SPAN> =
+</P>
+      <P><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">In STATA, =
+you can=20
+      calculate various information criteria and other important =
+statistics=20
+      using functions to extract matrices and scalars generated by the=20
+      regression operation:</SPAN> </P>
+      <P><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">Sample=20
+      size:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+after=20
+      regress, type the command&nbsp;&nbsp;&nbsp;&nbsp; <B>scalar=20
+      A=3D_result(1)</B></SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">Model=20
+      =
+SS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;=20
+      after regress, type the command&nbsp;&nbsp;&nbsp;&nbsp; <B>scalar=20
+      B=3D_result(2)</B></SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">Model=20
+      =
+df:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;=20
+      after regress, type the command&nbsp;&nbsp;&nbsp;&nbsp; <B>scalar=20
+      C=3D_result(3)</B></SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">Residual=20
+      SS:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+after=20
+      regress, type the command&nbsp;&nbsp;&nbsp;&nbsp; <B>scalar=20
+      D=3D_result(4)</B></SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">Residual=20
+      df:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+after=20
+      regress, type the command&nbsp;&nbsp;&nbsp;&nbsp; <B>scalar=20
+      E=3D_result(5)</B></SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">F-statistic:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;=20
+      after regress, type the command&nbsp;&nbsp;&nbsp;&nbsp; <B>scalar=20
+      F=3D_result(6)</B></SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">R-squared:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;&nbsp;=20
+      after regress, type the command&nbsp;&nbsp;&nbsp;&nbsp; <B>scalar=20
+      G=3D_result(7)</B></SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">Adjusted=20
+      R-sq:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; after =
+regress, type=20
+      the command&nbsp;&nbsp;&nbsp;&nbsp; <B>scalar =
+H=3D_result(8)</B></SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">Root=20
+      =
+MSE:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;&nbsp;=20
+      after regress, type the command&nbsp;&nbsp;&nbsp;&nbsp; <B>scalar=20
+      I=3D_result(9)</B></SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">Coefficients:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+=20
+      after regress, type the command&nbsp;&nbsp;&nbsp;&nbsp; <B>matrix=20
+      b=3Dget(_b)</B></SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt"># of=20
+      Parameters:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; after getting the =
+matrix=20
+      b, type&nbsp;&nbsp;&nbsp; s<B>calar k=3Dcolsof(b)</B></SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">Covariance=20
+      matrix:&nbsp;&nbsp;&nbsp;&nbsp; after regress, type the=20
+      command&nbsp;&nbsp;&nbsp; <B>matrix v=3Dget(VCE)</B></SPAN> =
+<BR>&nbsp; </P>
+      <P><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">You can =
+see what=20
+      you generated simply as follows:</SPAN> </P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar=20
+      list A B C D E F G H I k</SPAN></B> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      A =3D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 126</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      B =3D&nbsp; 1.6789218</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      C =3D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+8</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      D =3D&nbsp; .02844679</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      E =3D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 117</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      F =3D&nbsp; 863.16345</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      G =3D&nbsp; .98333881</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      H =3D&nbsp; .98219958</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      I =3D&nbsp; .01559279</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      k =3D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+9</SPAN>=20
+      <BR>&nbsp; <BR>&nbsp; </P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">matrix=20
+      list b</SPAN></B> </P>
+      <P><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">b[1,9]</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;=20
+      L.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      =
+LD.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      D.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+LD.&nbsp;</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      gas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      gas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; income</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">y1&nbsp;&nbsp;&nbsp;=20
+      .9721906&nbsp; -.17880883&nbsp; -.01830014&nbsp; =
+-.23593387&nbsp;&nbsp;=20
+      .05840944&nbsp;&nbsp;&nbsp; .0082806</SPAN> </P>
+      <P><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;=20
+      D.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+LD.&nbsp;</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      income&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      income&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _cons</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">y1&nbsp;&nbsp;=20
+      .27223322&nbsp;&nbsp; .04469364&nbsp; -.09296738</SPAN> <BR>&nbsp; =
+
+      <BR>&nbsp; </P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">matrix=20
+      list v</SPAN></B> </P>
+      <P><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">symmetric=20
+      v[9,9]</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      L.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      =
+LD.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      D.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; LD.</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      gas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      gas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; price</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;=20
+      L.gas&nbsp;&nbsp; .00064528</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;=20
+      LD.gas&nbsp; -.00044148&nbsp;&nbsp; .00823192</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;=20
+      price&nbsp;&nbsp;&nbsp; .0000944&nbsp;&nbsp; 7.738e-06&nbsp;&nbsp; =
+
+      .00009257</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;=20
+      D.price&nbsp; -.00013958&nbsp;&nbsp; .00013756&nbsp;=20
+      -.00003085&nbsp;&nbsp; .00139414</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;LD.price&nbsp;=20
+      -.00013149&nbsp;&nbsp; .00182434&nbsp; -.00005647&nbsp;=20
+      -.00046606&nbsp;&nbsp; .00198843</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;=20
+      income&nbsp; -.00045971&nbsp;&nbsp; .00041162&nbsp; =
+-.00008305&nbsp;&nbsp;=20
+      .00008961&nbsp;&nbsp; .00015336</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;D.income&nbsp;&nbsp;=20
+      .00048852&nbsp; -.00068779&nbsp;&nbsp; .00018875&nbsp;&nbsp;=20
+      .00096361&nbsp;&nbsp; .00057653</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">LD.income&nbsp;&nbsp;=20
+      .00047985&nbsp; -.00230927&nbsp;&nbsp; .00018465&nbsp;=20
+      -.00049299&nbsp;&nbsp; .00089038</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;=20
+      _cons&nbsp;&nbsp; .00263343&nbsp; -.00174625&nbsp; =
+-.00005413&nbsp;&nbsp;=20
+      -.0005658&nbsp; -.00012155</SPAN> </P>
+      <P><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      D.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+LD.&nbsp;</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;&nbsp;=20
+      income&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+income&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      income&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; _cons</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;=20
+      income&nbsp;&nbsp; .00042091</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;D.income&nbsp;=20
+      -.00023978&nbsp;&nbsp; .02401678</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">LD.income&nbsp;=20
+      -.00024082&nbsp;&nbsp; .00139978&nbsp;&nbsp; .02411617</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;=20
+      _cons&nbsp; -.00141118&nbsp;&nbsp; .00179191&nbsp;&nbsp;=20
+      .00174108&nbsp;&nbsp; .01477441</SPAN> <BR>&nbsp; <BR>&nbsp; </P>
+      <P><B><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">Akaike =
+
+      Information Criterion:</SPAN></B> <BR><SPAN style=3D"COLOR: =
+#000066">You can=20
+      get the Akaike Information Criterion as follows:</SPAN> </P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar=20
+      =
+AIC=3Dlog(_result(4)/_result(1))+(colsof(b)/_result(1))*2</SPAN></B>=20
+      <BR><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar=20
+      list AIC&nbsp;</SPAN></B> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      AIC =3D -8.2531446</SPAN> <BR>&nbsp; <BR>&nbsp; </P>
+      <P><B><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: =
+#000066">Schwarz=20
+      Information Criterion:</SPAN></B> <BR><SPAN style=3D"COLOR: =
+#000066">You can=20
+      get the Schwarz Information Criterion as follows:</SPAN> </P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar=20
+      =
+SIC=3Dlog(_result(4)/_result(1))+(colsof(b)/_result(1))*log(_result(1))</=
+SPAN></B>=20
+      <BR><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar=20
+      list SIC&nbsp;</SPAN></B> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      SIC =3D -8.0505531</SPAN> <BR>&nbsp; <BR>&nbsp; </P>
+      <P><B><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: =
+#000066">Programming in=20
+      STATA, I: How to Obtain Information Criteria</SPAN></B> </P>
+      <P><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">To help =
+you on the=20
+      model selection, I wrote a small routine that computes AIC and SIC =
+after=20
+      each round of regressions. This is called AICSIC.do. To download =
+the=20
+      program simply follow the steps below:</SPAN> </P>
+      <P><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">a) Click =
+<A=20
+      href=3D"http://www.econ.uiuc.edu/~econ472/AICSIC.do">here</A> to =
+save the=20
+      file.</SPAN> <BR><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: =
+#000066">b)=20
+      Open the program in the STATA Do-file editor (little envelope icon =
+in the=20
+      toolbar), in Notepad or in any other text editor.</SPAN> <BR><SPAN =
+
+      style=3D"FONT-FAMILY: Garamond; COLOR: #000066">c) Start editing =
+the file.=20
+      The first thing to notice is that lines preceded by * are only =
+descriptive=20
+      - they do not interfere in your routine.&nbsp;</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #000066">d) To capture the =
+correct=20
+      data set you will use, you can either replace the path where =
+you've saved=20
+      the data, or you can first open the respective data in STATA, and =
+next run=20
+      the Do-file.&nbsp;</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #000066">e) An example is =
+as follows:=20
+      if you have saved the problem set 2 data in a floppy disk, replace =
+the=20
+      first line by <B>use "A:\gasnew.dat"</B>, and add a line to infile =
+the=20
+      data in STATA, with the respective variables' names. You can look =
+at=20
+      e-Tutorial 1, if you forgot how to do that... Even simpler is to =
+save=20
+      gasnew.dat in STATA format, and open it before running the =
+Do-file. In=20
+      this case, just add * before the line with the path to the data=20
+      set.</SPAN> <BR><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: =
+#000066">f)=20
+      Adjust the variables' names in your Do-file according to the =
+respective=20
+      data set.</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #000066">g) Add or reduce =
+steps on=20
+      the model selection process, or provide different combinations you =
+believe=20
+      are reasonable. <I>But don't rely too much on a large number of=20
+      combinations; after all, economic theory will guide you as well on =
+the=20
+      model selection process.</I></SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #000066">h) Save your own =
+version of=20
+      Do-file (to avoid excessive havoc, use a different file name on=20
+      it).</SPAN> <BR><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: =
+#000066">g) In=20
+      Stata, go to File, Do..., and open your new Do-file. It runs =
+automatically=20
+      and the results will be shown on your screen. Because we are using =
+the=20
+      dual version of AIC and SIC, the best model among those included =
+presents=20
+      the lowest AIC, SIC.&nbsp;</SPAN> </P>
+      <P><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">**Once =
+again,=20
+      recall that in this tutorial I have used a different data set with =
+
+      different variables. So, you need to make your own adjustments and =
+
+      generate your own version of a Do-file.**</SPAN> </P>
+      <P><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">See below =
+how the=20
+      code looks like:</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: =
+#000066">****************************************************************=
+******************************</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">* A=20
+      small do-file to calculate AIC and SIC in STATA 6.0</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">* use=20
+      "C:\Econ472\auto2.dta"</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">* gen=20
+      t=3D_n</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*=20
+      label variable t "Integer time period"</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*=20
+      tsset t</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*=20
+      Model 1.1: Full Model</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">regress&nbsp;=20
+      gas&nbsp; L.gas&nbsp; LD.gas&nbsp; price&nbsp; D.price&nbsp;=20
+      LD.price&nbsp; income&nbsp; D.income&nbsp; LD.income</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">matrix&nbsp;&nbsp;=20
+      b1=3Dget(_b)</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      AIC1=3Dlog(_result(4)/_result(1))+(colsof(b1)/_result(1))*2</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      =
+SIC1=3Dlog(_result(4)/_result(1))+(colsof(b1)/_result(1))*log(_result(1))=
+</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*=20
+      Model 1.2: Drop LD.income</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">regress&nbsp;=20
+      gas&nbsp; L.gas&nbsp; LD.gas&nbsp; price&nbsp; D.price&nbsp;=20
+      LD.price&nbsp; income&nbsp; D.income</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">matrix&nbsp;&nbsp;=20
+      b2=3Dget(_b)</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      AIC2=3Dlog(_result(4)/_result(1))+(colsof(b2)/_result(1))*2</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      =
+SIC2=3Dlog(_result(4)/_result(1))+(colsof(b2)/_result(1))*log(_result(1))=
+</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*=20
+      Model 1.3: Drop LD.price</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">regress&nbsp;=20
+      gas&nbsp; L.gas&nbsp; LD.gas&nbsp; price&nbsp;=20
+      =
+D.price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+=20
+      income&nbsp; D.income&nbsp; LD.income</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">matrix&nbsp;&nbsp;=20
+      b3=3Dget(_b)</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      AIC3=3Dlog(_result(4)/_result(1))+(colsof(b3)/_result(1))*2</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      =
+SIC3=3Dlog(_result(4)/_result(1))+(colsof(b3)/_result(1))*log(_result(1))=
+</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*=20
+      Model 1.4: Drop LD.gas</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">regress&nbsp;=20
+      gas&nbsp; =
+L.gas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      price&nbsp; D.price&nbsp; LD.price&nbsp; income&nbsp; =
+D.income&nbsp;=20
+      LD.income</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">matrix&nbsp;&nbsp;=20
+      b4=3Dget(_b)</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      AIC4=3Dlog(_result(4)/_result(1))+(colsof(b4)/_result(1))*2</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      =
+SIC4=3Dlog(_result(4)/_result(1))+(colsof(b4)/_result(1))*log(_result(1))=
+</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*=20
+      Model 1.5: Drop LD.price, LD.income</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">regress&nbsp;=20
+      gas&nbsp; L.gas&nbsp; LD.gas&nbsp; price&nbsp;=20
+      =
+D.price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+=20
+      income&nbsp; D.income&nbsp;</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">matrix&nbsp;&nbsp;=20
+      b5=3Dget(_b)</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      AIC5=3Dlog(_result(4)/_result(1))+(colsof(b5)/_result(1))*2</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      =
+SIC5=3Dlog(_result(4)/_result(1))+(colsof(b5)/_result(1))*log(_result(1))=
+</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*=20
+      Model 1.6: Drop LD.gas, LD.income</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">regress&nbsp;=20
+      gas&nbsp; =
+L.gas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      price&nbsp; D.price&nbsp; LD.price&nbsp; income&nbsp;=20
+      D.income&nbsp;</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">matrix&nbsp;&nbsp;=20
+      b6=3Dget(_b)</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      AIC6=3Dlog(_result(4)/_result(1))+(colsof(b6)/_result(1))*2</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      =
+SIC6=3Dlog(_result(4)/_result(1))+(colsof(b6)/_result(1))*log(_result(1))=
+</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*=20
+      Model 1.7: Drop LD.gas, LD.price</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">regress&nbsp;=20
+      gas&nbsp; =
+L.gas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      price&nbsp;=20
+      =
+D.price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+=20
+      income&nbsp; D.income&nbsp; LD.income</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">matrix&nbsp;&nbsp;=20
+      b7=3Dget(_b)</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      AIC7=3Dlog(_result(4)/_result(1))+(colsof(b7)/_result(1))*2</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      =
+SIC7=3Dlog(_result(4)/_result(1))+(colsof(b7)/_result(1))*log(_result(1))=
+</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*=20
+      Model 1.8: Drop LD.gas, LD.price, LD.income</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">regress&nbsp;=20
+      gas&nbsp; =
+L.gas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      price&nbsp;=20
+      =
+D.price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+=20
+      income&nbsp; D.income</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">matrix&nbsp;&nbsp;=20
+      b8=3Dget(_b)</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      AIC8=3Dlog(_result(4)/_result(1))+(colsof(b8)/_result(1))*2</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      =
+SIC8=3Dlog(_result(4)/_result(1))+(colsof(b8)/_result(1))*log(_result(1))=
+</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*=20
+      Model 1.9: Drop LD.gas, LD.price, D.income, LD.income</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">regress&nbsp;=20
+      gas&nbsp; =
+L.gas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      price&nbsp;=20
+      =
+D.price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=
+=20
+      income&nbsp;</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">matrix&nbsp;&nbsp;=20
+      b9=3Dget(_b)</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      AIC9=3Dlog(_result(4)/_result(1))+(colsof(b9)/_result(1))*2</SPAN> =
+<BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      =
+SIC9=3Dlog(_result(4)/_result(1))+(colsof(b9)/_result(1))*log(_result(1))=
+</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*=20
+      Model 1.10: Drop LD.gas, D.price, LD.price, LD.income&nbsp;</SPAN> =
+
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">regress&nbsp;=20
+      gas&nbsp; =
+L.gas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      =
+price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      income&nbsp; D.income</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">matrix&nbsp;&nbsp;=20
+      b10=3Dget(_b)</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      =
+AIC10=3Dlog(_result(4)/_result(1))+(colsof(b10)/_result(1))*2</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      =
+SIC10=3Dlog(_result(4)/_result(1))+(colsof(b10)/_result(1))*log(_result(1=
+))</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*=20
+      Model 1.11: Drop LD.gas, D.price, LD.price, D.income,=20
+      LD.income&nbsp;</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">regress&nbsp;=20
+      gas&nbsp; =
+L.gas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      =
+price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      income&nbsp;</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">matrix=20
+      b11=3Dget(_b)</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar=20
+      =
+AIC11=3Dlog(_result(4)/_result(1))+(colsof(b11)/_result(1))*2</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar=20
+      =
+SIC11=3Dlog(_result(4)/_result(1))+(colsof(b11)/_result(1))*log(_result(1=
+))</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*=20
+      Model 1.12: Drop all lags and differences</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">regress&nbsp;=20
+      =
+gas&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      =
+price&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      income&nbsp;</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">matrix&nbsp;&nbsp;=20
+      b12=3Dget(_b)</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      =
+AIC12=3Dlog(_result(4)/_result(1))+(colsof(b12)/_result(1))*2</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar&nbsp;&nbsp;=20
+      =
+SIC12=3Dlog(_result(4)/_result(1))+(colsof(b12)/_result(1))*log(_result(1=
+))</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">*</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">* List=20
+      all calculated AICs and SICs</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">scalar=20
+      list</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">clear</SPAN>=20
+      <BR><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: =
+#000066">****************************************************************=
+*******************************</SPAN>=20
+      </P>
+      <P><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">For the =
+data set=20
+      auto2.dta, the results you will obtain are:</SPAN> </P>
+      <P><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">. *=20
+      List all calculated AICs and SICs</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">.=20
+      scalar list</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;=20
+      SIC12 =3D -5.6360039</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;=20
+      AIC12 =3D -5.7028484</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;=20
+      SIC11 =3D -7.8889369</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;=20
+      AIC11 =3D -7.9785176</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;=20
+      SIC10 =3D -7.8959571</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;=20
+      AIC10 =3D&nbsp; -8.007933</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      SIC9 =3D&nbsp; -8.113345</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      AIC9 =3D -8.2253208</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      SIC8 =3D&nbsp; -8.090258</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      AIC8 =3D -8.2246291</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      SIC7 =3D -8.0456909</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      AIC7 =3D -8.2032621</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      SIC6 =3D -8.0946516</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      AIC6 =3D -8.2522228</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      SIC5 =3D -8.1126393</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      AIC5 =3D -8.2702105</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      SIC4 =3D&nbsp; -8.056279</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      AIC4 =3D -8.2363604</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      SIC3 =3D -8.0743782</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      AIC3 =3D -8.2544596</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      SIC2 =3D -8.0882286</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      AIC2 =3D -8.2683099</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      SIC1 =3D -8.0505531</SPAN> <BR><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      AIC1 =3D -8.2531446</SPAN> <BR>&nbsp; </P>
+      <P><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">That's =
+it. In class=20
+      I'll also discuss the relation of AIC, SIC with the Mean Squared =
+Error,=20
+      along with some insights on what to do when the loss function is =
+flat=20
+      (i.e., the information criteria for different specifications are =
+very=20
+      close of each other).&nbsp;</SPAN> </P>
+      <P><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+      <P><B><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">USING=20
+      R:</SPAN></B></P>
+      <P><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">The =
+procedure to=20
+      calculate AIC and SIC in R is almost the same as in Stata. We need =
+to=20
+      estimate the model and then compute them. Start by loading the =
+libraries=20
+      dyn and stats and transforming the data:<o:p></o:p></SPAN></P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">library(dyn)<o:p></o:p></SPAN></B></P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">library(stats)<o:p></o:p></SPAN></B></P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">d.gas&lt;-read.table("http://www.econ.uiuc.edu/~econ472/AUTO2.txt",=
+header=3DT)<o:p></o:p></SPAN></B></P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">attach(d.gas)<o:p></o:p></SPAN></B></P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">gas&lt;-ts(gas,start=3D1959,frequency=3D4)<o:p></o:p></SPAN></B></P=
+>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">price&lt;-ts(price,start=3D1959,frequency=3D4)<o:p></o:p></SPAN></B=
+></P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">income&lt;-ts(income,start=3D1959,frequency=3D4)<o:p></o:p></SPAN><=
+/B></P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">miles&lt;-ts(miles,start=3D1959,frequency=3D4)<o:p></o:p></SPAN></B=
+></P>
+      <P><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+      <P><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">Here we =
+reproduce=20
+      the same example as given above. So, compute<o:p></o:p></SPAN></P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">f&lt;-dyn$lm(gas~lag(gas,-1)+lag(diff(gas),-1)+price+diff(price)+la=
+g(diff(price),-1)+<o:p></o:p></SPAN></B></P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">income+diff(income)+lag(diff(income),-1))<o:p></o:p></SPAN></B></P>=
+
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">summary(f)<o:p></o:p></SPAN></B></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">Call:<o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">lm(formula=20
+      =3D dyn(gas ~ lag(gas, -1) + lag(diff(gas), -1) + price +=20
+      <o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt"><SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp;&nbsp;&nbsp; </SPAN>diff(price) =
++=20
+      lag(diff(price), -1) + income + diff(income) + =
+<o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt"><SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp;&nbsp;&nbsp; =
+</SPAN>lag(diff(income),=20
+      -1)))<o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">Residuals:<o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt"><SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+</SPAN>Min<SPAN=20
+      style=3D"mso-spacerun: =
+yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      </SPAN>1Q<SPAN style=3D"mso-spacerun: yes">&nbsp;&nbsp;&nbsp;=20
+      </SPAN>Median<SPAN=20
+      style=3D"mso-spacerun: =
+yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      </SPAN>3Q<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; =
+</SPAN>Max=20
+      <o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">-0.074054=20
+      -0.007550<SPAN style=3D"mso-spacerun: yes">&nbsp; =
+</SPAN>0.000483<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp; </SPAN>0.007749<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp; </SPAN>0.045859 =
+<o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">Coefficients:<o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt"><SPAN=20
+      style=3D"mso-spacerun: =
+yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      </SPAN>Estimate Std. Error t value Pr(&gt;|t|)<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp;&nbsp;&nbsp; =
+</SPAN><o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">(Intercept)<SPAN=20
+      style=3D"mso-spacerun: =
+yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      </SPAN>-0.092968<SPAN style=3D"mso-spacerun: yes">&nbsp;&nbsp;=20
+      </SPAN>0.121550<SPAN style=3D"mso-spacerun: yes">&nbsp; =
+</SPAN>-0.765<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp;&nbsp; </SPAN>0.4459<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp;&nbsp;&nbsp; =
+</SPAN><o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">lag(gas,=20
+      -1)<SPAN=20
+      style=3D"mso-spacerun: =
+yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      </SPAN>0.972190<SPAN style=3D"mso-spacerun: yes">&nbsp;&nbsp;=20
+      </SPAN>0.025402<SPAN style=3D"mso-spacerun: yes">&nbsp; =
+</SPAN>38.272<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp; </SPAN>&lt; 2e-16=20
+      ***<o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">lag(diff(gas),=20
+      -1)<SPAN style=3D"mso-spacerun: yes">&nbsp;&nbsp;&nbsp;=20
+      </SPAN>-0.178806<SPAN style=3D"mso-spacerun: yes">&nbsp;&nbsp;=20
+      </SPAN>0.090730<SPAN style=3D"mso-spacerun: yes">&nbsp; =
+</SPAN>-1.971<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp;&nbsp; </SPAN>0.0511 .<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp; </SPAN><o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">price<SPAN=20
+      style=3D"mso-spacerun: =
+yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      </SPAN>-0.018300<SPAN style=3D"mso-spacerun: yes">&nbsp;&nbsp;=20
+      </SPAN>0.009621<SPAN style=3D"mso-spacerun: yes">&nbsp; =
+</SPAN>-1.902<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp;&nbsp; </SPAN>0.0596 .<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp; </SPAN><o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">diff(price)<SPAN=20
+      style=3D"mso-spacerun: =
+yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      </SPAN>-0.235935<SPAN style=3D"mso-spacerun: yes">&nbsp;&nbsp;=20
+      </SPAN>0.037338<SPAN style=3D"mso-spacerun: yes">&nbsp; =
+</SPAN>-6.319=20
+      4.95e-09 ***<o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">lag(diff(price),=20
+      -1)<SPAN style=3D"mso-spacerun: yes">&nbsp;&nbsp; =
+</SPAN>0.058411<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp;&nbsp; </SPAN>0.044592<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp;&nbsp; </SPAN>1.310<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp;&nbsp; </SPAN>0.1928<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp;&nbsp;&nbsp; =
+</SPAN><o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">income<SPAN=20
+      style=3D"mso-spacerun: =
+yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      </SPAN>0.008281<SPAN style=3D"mso-spacerun: yes">&nbsp;&nbsp;=20
+      </SPAN>0.020516<SPAN style=3D"mso-spacerun: yes">&nbsp;&nbsp;=20
+      </SPAN>0.404<SPAN style=3D"mso-spacerun: yes">&nbsp;&nbsp;=20
+      </SPAN>0.6872<SPAN style=3D"mso-spacerun: yes">&nbsp;&nbsp;&nbsp;=20
+      </SPAN><o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">diff(income)<SPAN=20
+      style=3D"mso-spacerun: =
+yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;=20
+      </SPAN>0.272230<SPAN style=3D"mso-spacerun: yes">&nbsp;&nbsp;=20
+      </SPAN>0.154974<SPAN style=3D"mso-spacerun: yes">&nbsp;&nbsp;=20
+      </SPAN>1.757<SPAN style=3D"mso-spacerun: yes">&nbsp;&nbsp; =
+</SPAN>0.0816=20
+      .<SPAN style=3D"mso-spacerun: yes">&nbsp; =
+</SPAN><o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">lag(diff(income),=20
+      -1)<SPAN style=3D"mso-spacerun: yes">&nbsp; </SPAN>0.044692<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp;&nbsp; </SPAN>0.155294<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp;&nbsp; </SPAN>0.288<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp;&nbsp; </SPAN>0.7740<SPAN=20
+      style=3D"mso-spacerun: yes">&nbsp;&nbsp;&nbsp; =
+</SPAN><o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">---<o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">Signif.=20
+      codes:<SPAN style=3D"mso-spacerun: yes">&nbsp; </SPAN>0 '***' =
+0.001 '**'=20
+      0.01 '*' 0.05 '.' 0.1 ' ' 1 <o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">Residual=20
+      standard error: 0.01559 on 117 degrees of =
+freedom<o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">Multiple=20
+      R-Squared: 0.9833,<SPAN style=3D"mso-spacerun: =
+yes">&nbsp;&nbsp;&nbsp;&nbsp;=20
+      </SPAN>Adjusted R-squared: 0.9822 <o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">F-statistic:=20
+      863.2 on 8 and 117 DF,<SPAN style=3D"mso-spacerun: yes">&nbsp;=20
+      </SPAN>p-value: &lt; 2.2e-16<B><o:p></o:p></B></SPAN></P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt"><![if =
+!supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></B></P>
+      <P><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: #000066">In order =
+to=20
+      calculate the sample size, one could sum the degrees of freedom =
+and the=20
+      number of estimated parameters, so we have the =
+following:</SPAN><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt"><o:p></o:p></SPAN></B></P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">sample.size&lt;-f$df=20
+      + length(f$coeff)</SPAN></B></P>
+      <P><SPAN style=3D"FONT-FAMILY: Garamond; COLOR: =
+#000066">Finally:</SPAN></P>
+      <P=20
+      class=3DMsoNormal><![if =
+!supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">aic&lt;-log(sum(resid(f)^2)/sample.size)+(length(f$coeff)/sample.si=
+ze)*2<o:p></o:p></SPAN></B></P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">aic<o:p></o:p></SPAN></B></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">[1]=20
+      -8.253146<B><o:p></o:p></B></SPAN></P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">sic&lt;-log(sum(resid(f)^2)/sample.size)+(length(f$coeff)/sample.si=
+ze)*<o:p></o:p></SPAN></B></P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">log(sample.size)<o:p></o:p></SPAN></B></P>
+      <P><B><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">sic<o:p></o:p></SPAN></B></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">[1]=20
+      -8.050554<o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt"><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+      <P style=3D"MARGIN: 0in 0in 0pt; mso-pagination: none"><SPAN=20
+      style=3D"FONT-FAMILY: 'Courier New'; COLOR: #000066; FONT-SIZE: =
+10pt">Now,=20
+      as described in the Stata procedure above, we just need to compute =
+
+      variations of this model and the respective aic, sic, or =
+both.</SPAN></P>
+      <P><![if !supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P>
+      <P><BR>&nbsp;</P></TD></TR></TBODY></TABLE></DIV>
+<P style=3D"TEXT-ALIGN: center" class=3DMsoNormal align=3Dcenter><SPAN=20
+style=3D"DISPLAY: none; mso-hide: all"><![if =
+!supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></SPAN></P>
+<DIV align=3Dcenter>
+<TABLE=20
+style=3D"WIDTH: 507pt; mso-cellspacing: 1.5pt; mso-padding-alt: 0in 0in =
+0in 0in"=20
+border=3D0 cellPadding=3D0 width=3D676 height=3D22>
+  <TBODY>
+  <TR style=3D"HEIGHT: 0.75pt">
+    <TD=20
+    style=3D"PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; WIDTH: 501pt; =
+PADDING-RIGHT: 0.75pt; HEIGHT: 0.75pt; PADDING-TOP: 0.75pt"=20
+    width=3D668>
+      <P style=3D"TEXT-ALIGN: center; mso-line-height-alt: .75pt" =
+class=3DMsoNormal=20
+      align=3Dcenter><IMG id=3D_x0000_i1027 border=3D0=20
+      src=3D"http://www.econ.uiuc.edu/~econ472/newbar.gif" width=3D669=20
+    height=3D5></P></TD></TR>
+  <TR style=3D"HEIGHT: 0.75pt">
+    <TD=20
+    style=3D"PADDING-BOTTOM: 0.75pt; PADDING-LEFT: 0.75pt; WIDTH: 501pt; =
+PADDING-RIGHT: 0.75pt; BACKGROUND: #cccccc; HEIGHT: 0.75pt; PADDING-TOP: =
+0.75pt"=20
+    width=3D668>
+      <P style=3D"TEXT-ALIGN: center; mso-line-height-alt: .75pt" =
+class=3DMsoNormal=20
+      align=3Dcenter><SPAN=20
+      style=3D"FONT-FAMILY: Garamond; COLOR: #090251; FONT-SIZE: =
+10pt">&nbsp;Last=20
+      update:&nbsp;<!--webbot bot=3D"Timestamp" startspan =
+S-Type=3D"EDITED"=0A=
+=0A=
+=0A=
+=0A=
+=0A=
+=0A=
+=0A=
+=0A=
+=0A=
+=0A=
+=0A=
+=0A=
+=0A=
+=0A=
+=0A=
+=0A=
+      S-Format=3D"%B %d, %Y" -->Sep.=20
+      10, 2007<!--webbot bot=3D"Timestamp"=0A=
+      i-CheckSum=3D"37951" endspan -->=20
+      </SPAN></P></TD></TR></TBODY></TABLE></DIV>
+<P=20
+class=3DMsoNormal><![if =
+!supportEmptyParas]><![endif]>&nbsp;<o:p></o:p></P></DIV></BODY></HTML>
+
+------=_NextPart_000_000E_01CCFA13.D7A85E40
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.econ.uiuc.edu/~econ472/vsmltraditional.gif
+
+R0lGODlhIwAuALMAAAAzZq+/z8/Z4v9mAD9ljP///w8/b19/n8zMzN/l7E9ylRBAcP///wAAAAAA
+AAAAACH5BAUUAAwALAAAAAAjAC4AAATFEMhJq7146M27/500YGRJjQBqrhaqsnAqxrRLx7ZV7Hzv
+F5lZBYj5EVtCCgJANO4SB0NQNpQcJzyBlJQbHo0KU5fFW42LTObOnCQB32txGw2/Tl90tf1yvrz1
+bFQlf2Vygm5phSV9Oolxi3N+jntIh3mKXJGNdYF4kpyGnpuAoSuEj5mWn6SQqqOYd6aTnbKgraJV
+tqm4FKeUFYxuOwSlRU4FAQu3NE58kcfHzqrQzZW8N8Ca2NbbtN3L37vhuyDl5iHjKxEAOw==
+
+------=_NextPart_000_000E_01CCFA13.D7A85E40
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.econ.uiuc.edu/~econ472/newbar.gif
+
+R0lGODlhywEUAOb/AP////7+/v39/fz8/Pv7+/r6+vn5+fj4+Pf39/b29vX19fT09PPz8/Ly8vHx
+8fDw8O/v7+7u7u3t7ezs7Ovr6+rq6unp6ejo6Ofn5+bm5uXl5eTk5OPj4+Li4uHh4eDg4N/f397e
+3t3d3dzc3Nvb29ra2tnZ2djY2NfX19bW1tXV1dTU1NPT09LS0tHR0dDQ0M/Pz87Ozs3NzczMzMvL
+y8rKysnJycjIyMfHx8bGxsXFxcTExMPDw8LCwsHBwcDAwL+/v76+vr29vby8vLu7u7q6urm5ubi4
+uLe3t7a2trW1tbS0tLOzs7KysrGxsbCwsK+vr66urq2traysrKurq6qqqqmpqaioqKenp6ampqWl
+paSkpKOjo6KioqGhoaCgoJ+fn56enp2dnZycnJubm5qampmZmZiYmJeXl5aWlpWVlZSUlJOTk5KS
+kgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5
+BAEAAP8ALAAAAADLARQAQAf/gEVCTEtJQERJPD1HRj4+Q0BFQFJLXFlVUExPUF5fUFJMWVxVV0uh
+U1JYRUZVSlNLUUVSUFVITkZQS05KTEJEVUZTVFNPW09cYVVUUl1UVV1iYFheU1toXGPQalyzSd5E
+UlFJvr1NT0RETUZIS0O+SkJKQ7xKT05F9kfekEM/Rj2OiAzJIalHjxw0bPQAcsMgjR4yYrRwMcNG
+DBg2XMSg4aJEixUTS6xAIUIECREgV8To4OIEChAYRKiwcEIDBRMhLGDw0OFCBA0YIETwUGHDhwwc
+JnSgkCHCBAQPKlR44GBAgwQICgwAEGArAgEAwgI4AADBAQJhFRgAICBCAQAG/94ykCCggoMDGAho
+iJCBwQUOGyBUCDFiRIYNIUCgCLFhBYgPJlJkKDkCxYgUJEaI8HDiA+YTJjyMcMl4Q4YQGv4iLpFB
+AwoSJFV4eFGCRWYVJWCgQPFhRQoPLTyfCPGBRAoYLUDEiHGChQoYKXLAGMFipIgSKkaiUIGiRYsU
+M2rcSHFDhgoVLG6YOAGDRosYMma4UEGDhY+PMODroPHChY0fMujQQg00xCBfCibMIMJ0H0B2XUwk
+TKBBCHZlYEEDF2RQgQQTTIDBAw00oAACEBSBxBBPAHEOET4kEYUYXVzRRBfEbKHFF1gwcUUUUdh4
+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
+sFIAdQHc9AEWEAgAOw==
+
+------=_NextPart_000_000E_01CCFA13.D7A85E40
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.econ.uiuc.edu/~econ472/back21.gif
+
+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
+
+------=_NextPart_000_000E_01CCFA13.D7A85E40
+Content-Type: image/gif
+Content-Transfer-Encoding: base64
+Content-Location: http://www.econ.uiuc.edu/~econ472/lines.gif
+
+R0lGODlhMgAKAJEAADMzZgAAM/4BAgAAACH5BAQUAP8ALAAAAAAyAAoAAAIihI+py50Bo5y02jud
+3hzhD4ZSR5aPiKajyXbqi7ayBtdfAQA7
+
+------=_NextPart_000_000E_01CCFA13.D7A85E40--

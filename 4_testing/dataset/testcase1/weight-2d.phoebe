@@ -1,0 +1,5 @@
+log10(f_weight) = 1.746 + 0.0124*bpd + 0.001906*cvb : Hang Ho
+log10(f_weight) = 1.304 + 0.05281*cvb/10 + 0.1938*fl/10 - 0.004*cvb*fl/100 : Hadlock
+log10(f_weight) = 1.2508 + 0.166*bpd/10 + 0.046*cvb/10 - 0.002646*cvb*bpd/100 : Sherpard
+f_weight        = 1000 * e^(-4.564 + 0.282*cvb/10 - 0.00331*cvb*cvb/100) : Campbell & Wilkin
+ 

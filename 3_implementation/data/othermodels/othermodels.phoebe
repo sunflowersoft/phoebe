@@ -1,0 +1,21 @@
+EFW = 3.42 * APTD * TTD * FL + 1.07 * (BPD^3) : Tokyo
+
+EFW = 6.3 + 3.50655 * FTA * FL + 1.25674 * (BPD^3) : Osaka
+
+EFW = 10^(1.304 + 0.05281 * AC + 0.1938 * FL - 0.004 * FL * AC) : hadlock1
+
+EFW = 10^(1.335 - 0.0034 * AC * FL + 0.0316 * BPD + 0.0457 * AC + 0.1623 * FL) : hadlock2
+
+EFW = 10^(1.326 - 0.00362 * AC * FL + 0.0107 * HC + 0.0438 * AC + 0.158 * FL) : hadlock3
+
+EFW = 10^(1.3596 - 0.00386 * AC * FL + 0.0064 * HC + 0.00061 * BPD * AC + 0.0424 * AC + 0.174 * FL) : hadlock4
+
+EFW = 10^(1.2508 + 0.166 * BPD + 0.046 * AC - 2.646 * AC * BPD / 1000) : Shepard
+
+EFW = -3200.40479 + 157.07186 * AC + 15.90391 * (BPD^2) : Merz1
+
+EFW = 0.1 * (AC^3) : Merz2
+
+EFW = 515.263 - 1057.75*BPD  + 649.145 * THD + 93.0707 * (BPD^2) - 20.562 * (THD^2) : Hansman
+
+EFW = 10^(-1.564 + 0.282 * AC - 0.00331 * (AC^2)) : Campbell

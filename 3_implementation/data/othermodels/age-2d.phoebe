@@ -1,0 +1,6 @@
+age_fetal        = 331.022307583389 - 1.611773915587*(hc+cvb) + 0.002779686994*((hc+cvb)^2) - 0.000001530428*((hc+cvb)^3) : Hang Ho
+age_fetal        = 5.596 + 0.941*cvb/10 : Varol 1 : Fusun Varol, Ahmet Saltik, Petek Balkanli Kaplan, Tulay Kilic and Turgut Yardim. Evaluation of Gestational Age Based on Ultrasound Fetal Growth Measurements. Yonsei Medical Journal, vol. 42, No. 3, pp. 299-303, 2001
+age_fetal        = 1.863 + 6.280*fl/10 - 0.211*((fl/10)^2) : Varol 5 : Fusun Varol, Ahmet Saltik, Petek Balkanli Kaplan, Tulay Kilic and Turgut Yardim. Evaluation of Gestational Age Based on Ultrasound Fetal Growth Measurements. Yonsei Medical Journal, vol. 42, No. 3, pp. 299-303, 2001
+age_fetal        = 11.769 + 1.275*fl/10 + 0.449*((fl/10)^2) - 0.02*((fl/10)^3): Varol 6 : Fusun Varol, Ahmet Saltik, Petek Balkanli Kaplan, Tulay Kilic and Turgut Yardim. Evaluation of Gestational Age Based on Ultrasound Fetal Growth Measurements. Yonsei Medical Journal, vol. 42, No. 3, pp. 299-303, 2001
+
+

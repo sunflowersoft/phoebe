@@ -1,0 +1,3 @@
+log10(f_weight) = 1.746 + 0.0124*bpd + 0.001906*cvb : Hang Ho (2D)
+f_weight        = -882.7049 + 73.9955*thigh_vol - 0.497*(thigh_vol^2) + 0.0014*(thigh_vol^3) : Hang Ho (3D)
+f_weight        = -3306 + 55.477*bpd + 13.483*thigh_vol : Hang Ho (2D & 3D)

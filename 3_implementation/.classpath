@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/jxl-2.6.jar"/>
+	<classpathentry kind="lib" path="lib/flanagan.jar" sourcepath="lib/flangan-src.zip"/>
+	<classpathentry kind="lib" path="lib/commons-cli-1.2.jar"/>
+	<classpathentry kind="lib" path="lib/gdsprint_0_2.jar" sourcepath="lib/gdsprint_0_2-src.zip">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/phoebe/lib/gdsprint_0_2-doc.zip!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="lib/javacsv.jar" sourcepath="lib/javacsv-src.zip"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

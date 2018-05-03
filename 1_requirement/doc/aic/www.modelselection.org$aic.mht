@@ -1,0 +1,794 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: Akaike's Information Criterion
+Date: Sun, 4 Mar 2012 10:52:04 +0700
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CCF9F4.D62F1CD0"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16385
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CCF9F4.D62F1CD0
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.modelselection.org/aic/
+
+=EF=BB=BF<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML lang=3Den-US xml:lang=3D"en-US"=20
+xmlns=3D"http://www.w3.org/1999/xhtml"><HEAD><TITLE>Akaike's Information =
+Criterion</TITLE>
+<META content=3D"text/html; charset=3DUTF-8" http-equiv=3DContent-Type>
+<META name=3DDESCRIPTION content=3DAkaike>
+<META name=3DKEYWORDS content=3DAkaike><LINK rel=3Dstylesheet =
+type=3Dtext/css=20
+href=3D"http://www.martinsewell.com/style.css">
+<META name=3Dauthor content=3D"Martin Sewell">
+<META name=3DGENERATOR content=3D"MSHTML 8.00.7600.16385"></HEAD>
+<BODY>
+<H1>AIC (Akaike's information criterion)</H1>
+<P>"Akaike's Information Criterion is a criterion for selecting among =
+nested=20
+econometric models."<BR>About, Inc. (2006) </P>
+<P>"An index used in a number of areas as an aid to choosing between =
+competing=20
+models. It is defined as<BR>
+<CENTER>-2<I>L<SUB>m</SUB></I> + 2<I>m</I> </CENTER><BR>where=20
+<I>L<SUB>m</SUB></I> is the maximized <EM>log-likelihood</EM> and =
+<EM>m</EM> is=20
+the number of parameters in the model. The index takes into account both =
+the=20
+statistical goodness of fit and the number of parameters that have to be =
+
+estimated to achieve this particular degree of fit, by imposing a =
+penalty for=20
+increasing the number of parameters. Lower values of the index indicate =
+the=20
+preferred model, that is, the one with the fewest parameters that still =
+provides=20
+an adequate fit to the data."<BR>Everitt (1998), The Cambridge =
+Dictionary of=20
+Statistics=20
+<P></P>
+<P>"Akaike (1973) defined the most well-known criterion as AIC =3D - ln =
+<I>L</I> +=20
+<I>p</I>, where <I>L</I> is the likelihood for an estimated model with =
+<I>p</I>=20
+parameters."<BR>Hjorth (1994) </P>
+<P>"When a model involving <I>q</I> parameters is fitted to data, the =
+criterion=20
+is defined as -2<I>L<SUB>q</SUB></I> + 2<I>q</I>, where =
+<I>L<SUB>q</SUB></I> is=20
+the maximised log likelihood. Akaike suggested maximising the numbers of =
+
+parameters. It was originally proposed for time-series models, but has =
+also been=20
+used in regression."<BR>Marriott (1990), A Dictionary of Statistical =
+Terms </P>
+<P>"Criterion, introduced by Akaike in 1969, for choosing between =
+competing=20
+statistical models. For categorical data this amounts to choosing the =
+model that=20
+minimizes <I>G</I><SUP>2</SUP> - 2<I>v</I>, where <I>G</I><SUP>2</SUP> =
+is the=20
+likelihood-ratio goodness-of-fit statistic <I>v</I> is the number of =
+degrees of=20
+freedom associated with the model."<BR>Upton and Cook (2002) </P>
+<P>"The <B>Akaike information criterion (AIC)</B> (pronounced, =
+approximately,=20
+ah-kah-ee-kay), developed by Professor Hirotugu Akaike (?? ??) in 1971 =
+and=20
+proposed in 1974, is a statistical model fit measure."<BR>Wikipedia =
+(2006) </P>
+<UL>
+  <LI><A=20
+  =
+href=3D"http://economics.about.com/library/glossary/bldef-akaikes-informa=
+tion-criterion.htm">Akaike's=20
+  Information Criterion - Glossary - Dictionary Definition of Akaike's=20
+  Information Criterion</A></LI>
+  <LI><A=20
+  =
+href=3D"http://en.wikipedia.org/wiki/Akaike_information_criterion">Wikipe=
+dia:=20
+  Akaike information criterion</A></LI></UL><!--=0A=
+<h2>Papers</h2>=0A=
+<ul>=0A=
+<li><a href=3D"BuSo.pdf">Akaike Without Tears</a><br />=0A=
+Ken Burnham and Elliott Sober<br />=0A=
+<br />=0A=
+=0A=
+<li><a href=3D"Cava97.pdf">Unifying the Derivations for the Afaike and =
+Corrected Akaike Information Criterion</a><br />=0A=
+Joseph E. Cavanaugh<br />=0A=
+<br />=0A=
+<li><a href=3D"ShTs98.pdf">A Note On the Unification of the Akaike =
+Information Criterion</a><br />=0A=
+SHI, Peide and Chih-Ling TSAI<br />=0A=
+<br />=0A=
+<li><a href=3D"TsSu.pdf">Finite corrections of Akaike's information =
+criterion for model selection of contingency table analysis</a><br />=0A=
+Shin-ichi Tsukada and Sanae Sugiyama<br />=0A=
+</ul>=0A=
+--><!-- Start of StatCounter Code -->
+<SCRIPT type=3Dtext/javascript>=0A=
+var sc_project=3D878162;=0A=
+var sc_invisible=3D0;=0A=
+var sc_partition=3D7;=0A=
+var sc_security=3D"dd98a97a";=0A=
+var sc_remove_link=3D1;=0A=
+</SCRIPT>
+
+<SCRIPT type=3Dtext/javascript=20
+src=3D"http://www.statcounter.com/counter/counter_xhtml.js"></SCRIPT>
+<NOSCRIPT>
+<DIV class=3Dstatcounter><IMG class=3Dstatcounter alt=3D"website page =
+counter"=20
+src=3D"http://c8.statcounter.com/878162/0/dd98a97a/0/"></DIV></NOSCRIPT><=
+!-- End of StatCounter Code --></BODY></HTML>
+
+------=_NextPart_000_0000_01CCF9F4.D62F1CD0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: base64
+Content-Location: http://c8.statcounter.com/878162/0/dd98a97a/0/
+
+R0lGODlhAQABAJH/AP///wAAAMDAwAAAACH5BAEAAAIALAAAAAABAAEAAAICVAEAOw==
+
+------=_NextPart_000_0000_01CCF9F4.D62F1CD0
+Content-Type: text/css;
+	charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.martinsewell.com/style.css
+
+HTML {
+	DISPLAY: block
+}
+ADDRESS {
+	DISPLAY: block
+}
+BLOCKQUOTE {
+	DISPLAY: block
+}
+BODY {
+	DISPLAY: block
+}
+DD {
+	DISPLAY: block
+}
+DIV {
+	DISPLAY: block
+}
+DL {
+	DISPLAY: block
+}
+DT {
+	DISPLAY: block
+}
+FIELDSET {
+	DISPLAY: block
+}
+FORM {
+	DISPLAY: block
+}
+FRAME {
+	DISPLAY: block
+}
+FRAMESET {
+	DISPLAY: block
+}
+H1 {
+	DISPLAY: block
+}
+H2 {
+	DISPLAY: block
+}
+H3 {
+	DISPLAY: block
+}
+H4 {
+	DISPLAY: block
+}
+H5 {
+	DISPLAY: block
+}
+H6 {
+	DISPLAY: block
+}
+NOFRAMES {
+	DISPLAY: block
+}
+OL {
+	DISPLAY: block
+}
+P {
+	DISPLAY: block
+}
+UL {
+	DISPLAY: block
+}
+CENTER {
+	DISPLAY: block
+}
+DIR {
+	DISPLAY: block
+}
+HR {
+	DISPLAY: block
+}
+MENU {
+	DISPLAY: block
+}
+PRE {
+	DISPLAY: block
+}
+LI {
+	DISPLAY: list-item
+}
+HEAD {
+	DISPLAY: none
+}
+TABLE {
+	DISPLAY: table
+}
+TR {
+	DISPLAY: table-row
+}
+THEAD {
+	DISPLAY: table-header-group
+}
+TBODY {
+	DISPLAY: table-row-group
+}
+TFOOT {
+	DISPLAY: table-footer-group
+}
+COL {
+	DISPLAY: table-column
+}
+COLGROUP {
+	DISPLAY: table-column-group
+}
+TD {
+	DISPLAY: table-cell
+}
+TH {
+	DISPLAY: table-cell
+}
+CAPTION {
+	DISPLAY: table-caption
+}
+TH {
+	TEXT-ALIGN: center; FONT-WEIGHT: bolder
+}
+CAPTION {
+	TEXT-ALIGN: center
+}
+BODY {
+	MARGIN: 20px
+}
+H1 {
+	MARGIN: 0.67em 0px; FONT-SIZE: 2em
+}
+H2 {
+	MARGIN: 0.75em 0px; FONT-SIZE: 1.5em
+}
+H3 {
+	MARGIN: 0.83em 0px; FONT-SIZE: 1.17em
+}
+H4 {
+	MARGIN: 1.12em 0px
+}
+P {
+	MARGIN: 1.12em 0px
+}
+BLOCKQUOTE {
+	MARGIN: 1.12em 0px
+}
+UL {
+	MARGIN: 1.12em 0px
+}
+FIELDSET {
+	MARGIN: 1.12em 0px
+}
+FORM {
+	MARGIN: 1.12em 0px
+}
+OL {
+	MARGIN: 1.12em 0px
+}
+DL {
+	MARGIN: 1.12em 0px
+}
+DIR {
+	MARGIN: 1.12em 0px
+}
+MENU {
+	MARGIN: 1.12em 0px
+}
+H5 {
+	MARGIN: 1.5em 0px; FONT-SIZE: 0.83em
+}
+H6 {
+	MARGIN: 1.67em 0px; FONT-SIZE: 0.75em
+}
+H1 {
+	FONT-WEIGHT: bolder
+}
+H2 {
+	FONT-WEIGHT: bolder
+}
+H3 {
+	FONT-WEIGHT: bolder
+}
+H4 {
+	FONT-WEIGHT: bolder
+}
+H5 {
+	FONT-WEIGHT: bolder
+}
+H6 {
+	FONT-WEIGHT: bolder
+}
+B {
+	FONT-WEIGHT: bolder
+}
+STRONG {
+	FONT-WEIGHT: bolder
+}
+BLOCKQUOTE {
+	MARGIN-LEFT: 40px; MARGIN-RIGHT: 40px
+}
+I {
+	FONT-STYLE: italic
+}
+CITE {
+	FONT-STYLE: italic
+}
+EM {
+	FONT-STYLE: italic
+}
+VAR {
+	FONT-STYLE: italic
+}
+ADDRESS {
+	FONT-STYLE: italic
+}
+PRE {
+	FONT-FAMILY: monospace
+}
+TT {
+	FONT-FAMILY: monospace
+}
+CODE {
+	FONT-FAMILY: monospace
+}
+KBD {
+	FONT-FAMILY: monospace
+}
+SAMP {
+	FONT-FAMILY: monospace
+}
+PRE {
+	WHITE-SPACE: pre
+}
+BIG {
+	FONT-SIZE: 1.17em
+}
+SMALL {
+	FONT-SIZE: 0.83em
+}
+SUB {
+	FONT-SIZE: 0.83em
+}
+SUP {
+	FONT-SIZE: 0.83em
+}
+SUB {
+	VERTICAL-ALIGN: sub
+}
+SUP {
+	VERTICAL-ALIGN: super
+}
+TABLE {
+	BORDER-SPACING: 2px
+}
+THEAD {
+	VERTICAL-ALIGN: middle
+}
+TBODY {
+	VERTICAL-ALIGN: middle
+}
+TFOOT {
+	VERTICAL-ALIGN: middle
+}
+TD {
+	VERTICAL-ALIGN: inherit
+}
+TH {
+	VERTICAL-ALIGN: inherit
+}
+S {
+	TEXT-DECORATION: line-through
+}
+STRIKE {
+	TEXT-DECORATION: line-through
+}
+DEL {
+	TEXT-DECORATION: line-through
+}
+HR {
+	BORDER-BOTTOM: 1px inset; BORDER-LEFT: 1px inset; BORDER-TOP: 1px =
+inset; BORDER-RIGHT: 1px inset
+}
+OL {
+	MARGIN-LEFT: 40px
+}
+UL {
+	MARGIN-LEFT: 40px
+}
+DIR {
+	MARGIN-LEFT: 40px
+}
+MENU {
+	MARGIN-LEFT: 40px
+}
+DD {
+	MARGIN-LEFT: 40px
+}
+OL {
+	LIST-STYLE-TYPE: decimal
+}
+OL UL {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+UL OL {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+UL UL {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+OL OL {
+	MARGIN-TOP: 0px; MARGIN-BOTTOM: 0px
+}
+U {
+	TEXT-DECORATION: underline
+}
+INS {
+	TEXT-DECORATION: underline
+}
+BR:before {
+	CONTENT: "\A"
+}
+CENTER {
+	TEXT-ALIGN: center
+}
+:link {
+	TEXT-DECORATION: underline
+}
+:visited {
+	TEXT-DECORATION: underline
+}
+:focus {
+	OUTLINE-STYLE: dotted; OUTLINE-COLOR: invert; OUTLINE-WIDTH: thin
+}
+BDO[DIR=3D'ltr'] {
+	unicode-bidi: bidi-override; DIRECTION: ltr
+}
+BDO[DIR=3D'rtl'] {
+	unicode-bidi: bidi-override; DIRECTION: rtl
+}
+*[DIR=3D'ltr'] {
+	unicode-bidi: embed; DIRECTION: ltr
+}
+*[DIR=3D'rtl'] {
+	unicode-bidi: embed; DIRECTION: rtl
+}
+
+@media Print   =20
+{
+H1 {
+	PAGE-BREAK-BEFORE: always
+}
+H1 {
+	PAGE-BREAK-AFTER: avoid
+}
+H2 {
+	PAGE-BREAK-AFTER: avoid
+}
+H3 {
+	PAGE-BREAK-AFTER: avoid
+}
+H4 {
+	PAGE-BREAK-AFTER: avoid
+}
+H5 {
+	PAGE-BREAK-AFTER: avoid
+}
+H6 {
+	PAGE-BREAK-AFTER: avoid
+}
+UL {
+	PAGE-BREAK-BEFORE: avoid
+}
+OL {
+	PAGE-BREAK-BEFORE: avoid
+}
+DL {
+	PAGE-BREAK-BEFORE: avoid
+}
+    }
+P {
+	FONT-FAMILY: Georgia, Trebuchet, Tahoma
+}
+SPAN.texhtml {
+	FONT-FAMILY: serif
+}
+H1 {
+	TEXT-ALIGN: center
+}
+A:hover {
+	BACKGROUND-COLOR: #ff0; COLOR: red
+}
+A:hover {
+	BACKGROUND-COLOR: #ff0; COLOR: red
+}
+A:active {
+	BACKGROUND-COLOR: red; COLOR: #ff0
+}
+A:active {
+	BACKGROUND-COLOR: red; COLOR: #ff0
+}
+#header {
+	TEXT-ALIGN: center
+}
+.uline {
+	TEXT-DECORATION: underline
+}
+.centeredImage {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 0px; MARGIN-TOP: 0px; PADDING-LEFT: =
+0px; PADDING-RIGHT: 0px; MARGIN-BOTTOM: 0px; PADDING-TOP: 0px
+}
+#one {
+	WIDTH: 100%; FLOAT: left
+}
+#two1 {
+	PADDING-BOTTOM: 20px; PADDING-LEFT: 20px; WIDTH: 45%; PADDING-RIGHT: =
+20px; FLOAT: left; PADDING-TOP: 20px
+}
+#two2 {
+	PADDING-BOTTOM: 20px; PADDING-LEFT: 20px; WIDTH: 45%; PADDING-RIGHT: =
+20px; FLOAT: left; PADDING-TOP: 20px
+}
+#two1p {
+	PADDING-BOTTOM: 50px; PADDING-LEFT: 50px; WIDTH: 50%; PADDING-RIGHT: =
+50px; FLOAT: left; PADDING-TOP: 50px
+}
+#two2p {
+	PADDING-BOTTOM: 50px; PADDING-LEFT: 50px; WIDTH: 50%; PADDING-RIGHT: =
+50px; FLOAT: left; PADDING-TOP: 50px
+}
+#three1 {
+	WIDTH: 33%; FLOAT: left
+}
+#three2 {
+	WIDTH: 33%; FLOAT: left
+}
+#three3 {
+	WIDTH: 33%; FLOAT: left
+}
+#four1 {
+	WIDTH: 24%; FLOAT: left
+}
+#four2 {
+	WIDTH: 24%; FLOAT: left
+}
+#four3 {
+	WIDTH: 24%; FLOAT: left
+}
+#four4 {
+	WIDTH: 24%; FLOAT: left
+}
+#five1 {
+	WIDTH: 19%; FLOAT: left
+}
+#five2 {
+	WIDTH: 19%; FLOAT: left
+}
+#five3 {
+	WIDTH: 19%; FLOAT: left
+}
+#five4 {
+	WIDTH: 19%; FLOAT: left
+}
+#five5 {
+	WIDTH: 18%; FLOAT: left
+}
+#cl {
+	CLEAR: both
+}
+.whiteout {
+	BACKGROUND: #fff; COLOR: #fff
+}
+A IMG {
+	COLOR: #fff
+}
+
+@media All   =20
+{
+A IMG {
+	BORDER-BOTTOM: medium none; BORDER-LEFT: medium none; COLOR: inherit; =
+BORDER-TOP: medium none; BORDER-RIGHT: medium none
+}
+
+}
+
+------=_NextPart_000_0000_01CCF9F4.D62F1CD0
+Content-Type: application/octet-stream
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.statcounter.com/counter/counter_xhtml.js
+
+var sc_width=3Dscreen.width;var sc_height=3Dscreen.height;var =
+sc_referer=3D""+document.referrer;try{sc_referer=3D""+parent.document.ref=
+errer}catch(ex){sc_referer=3D""+document.referrer}var sc_unique=3D0;var =
+sc_returning=3D0;var sc_returns=3D0;var sc_error=3D0;var =
+sc_remove=3D0;var sc_cls=3D-1;var sc_inv=3D0;var sc_os=3D"";var =
+sc_title=3D"";var sc_url=3D"";var sc_base_dir=3D"";var =
+sc_click_dir=3D"";var sc_link_back_start=3D"";var =
+sc_link_back_end=3D"";var sc_security_code=3D"";var =
+sc_http_url=3D"http";var sc_host=3D"statcounter.com";var sc_dc=3D"c";var =
+sc_alt_text=3D"StatCounter - Free Web Tracker and Counter";var =
+sc_counter_size=3D"";if(window.sc_invisible){if(window.sc_invisible=3D=3D=
+1){sc_inv=3D1}}if(window.sc_click_stat){sc_cls=3Dwindow.sc_click_stat}if(=
+window.sc_https){if(sc_https=3D=3D1){sc_doc_loc=3D''+document.location;my=
+RE=3Dnew =
+RegExp("^https","i");if(sc_doc_loc.match(myRE)){sc_http_url=3D"https"}}}i=
+f(window.sc_project){if(sc_project=3D=3D"4135125"||sc_project=3D=3D"61696=
+19"||sc_project=3D=3D"6222332"||sc_project=3D=3D"5106510"||sc_project=3D=3D=
+"6311399"||sc_project=3D=3D"6320092"||sc_project=3D=3D"5291656"||sc_proje=
+ct=3D=3D"7324465"||sc_project=3D=3D"6640020"||sc_project=3D=3D"4629288"||=
+sc_project=3D=3D"1480088"||sc_project=3D=3D"2447031"){sc_dc=3D"counterb"}=
+else =
+if(sc_inv=3D=3D1&&sc_project%10<=3D4){sc_dc=3D"counterb"}}if(window.sc_lo=
+cal){sc_base_dir=3Dsc_local}else{if(sc_cls=3D=3D-1){sc_cls=3D1}sc_base_di=
+r=3Dsc_http_url+"://"+sc_dc+"."+sc_host+"/"}sc_click_dir=3Dsc_base_dir;if=
+(window.sc_text){sc_base_dir+=3D"text.php?"}else{sc_base_dir+=3D"t.php?"}=
+if(window.sc_project){if(sc_project=3D=3D"4135125"||sc_project=3D=3D"6169=
+619"||sc_project=3D=3D"6222332"||sc_project=3D=3D"5106510"||sc_project=3D=
+=3D"6311399"||sc_project=3D=3D"6320092"||sc_project=3D=3D"5291656"||sc_pr=
+oject=3D=3D"7324465"||sc_project=3D=3D"6640020"||sc_project=3D=3D"4629288=
+"||sc_project=3D=3D"1480088"||sc_project=3D=3D"2447031"){if(Math.floor(Ma=
+th.random()*6)!=3D1){sc_remove=3D1}}sc_base_dir+=3D"sc_project=3D"+sc_pro=
+ject}else =
+if(window.usr){sc_base_dir+=3D"usr=3D"+usr}else{sc_error=3D1}if(window.sc=
+_remove_link){sc_link_back_start=3D"";sc_link_back_end=3D""}else{sc_link_=
+back_start=3D"<a class=3D\"statcounter\" =
+href=3D\"http://www."+sc_host+"\" =
+target=3D\"_blank\">";sc_link_back_end=3D"<\/a>"}sc_date=3Dnew =
+Date();sc_time=3Dsc_date.getTime();sc_time_difference=3D3600000;sc_title=3D=
+""+document.title;sc_url=3D""+document.location;sc_referer=3Dsc_referer.s=
+ubstring(0,600);sc_title=3Dsc_title.substring(0,300);sc_url=3Dsc_url.subs=
+tring(0,300);sc_referer=3Descape(sc_referer);if(encodeURIComponent){sc_ti=
+tle=3DencodeURIComponent(sc_title)}else{sc_title=3Descape(sc_title)}sc_ur=
+l=3Descape(sc_url);if(window.sc_security){sc_security_code=3Dsc_security}=
+if(sc_script_num){sc_script_num++}else{var sc_script_num=3D1}var =
+sc_tracking_url=3Dsc_base_dir+"&resolution=3D"+sc_width+"&h=3D"+sc_height=
++"&camefrom=3D"+sc_referer+"&u=3D"+sc_url+"&t=3D"+sc_title+"&java=3D1&sec=
+urity=3D"+sc_security_code+"&sc_random=3D"+Math.random()+"&sc_snum=3D"+sc=
+_script_num;var sc_clstr=3D"<span =
+class=3D\"statcounter\">";if(window.sc_counter_width&&window.sc_counter_h=
+eight){sc_counter_size=3D" width=3D\""+sc_counter_width+"\" =
+height=3D\""+sc_counter_height+"\""}if(window.sc_remove_alt){sc_alt_text=3D=
+""}var sc_cltext=3D"\" alt=3D\""+sc_alt_text+"\" =
+border=3D\"0\""+sc_counter_size+">";var =
+sc_strout=3Dsc_clstr+sc_link_back_start+"<img =
+src=3D\""+sc_tracking_url+sc_cltext+sc_link_back_end+"</span>";if(sc_erro=
+r=3D=3D1){document.writeln("Code corrupted. Insert fresh copy.")}else =
+if(sc_remove=3D=3D1){}else{if(sc_inv=3D=3D1){if(window.sc_call){sc_call++=
+}else{sc_call=3D1}eval("var sc_img"+sc_call+" =3D new =
+Image();sc_img"+sc_call+".src =3D =
+\""+sc_tracking_url+"&invisible=3D1\"")}else =
+if(window.sc_text){document.writeln('<scr'+'ipt =
+language=3D"JavaScript"'+' =
+src=3D'+sc_tracking_url+"&text=3D"+sc_text+'></scr'+'ipt>')}else{document=
+.writeln(sc_strout)}}if(sc_cls>0){if(clickstat_done!=3D1){var =
+clickstat_done=3D1;var clickstat_project=3Dwindow.sc_project;var =
+clickstat_security=3Dwindow.sc_security_code;var =
+dlext=3D"7z|aac|avi|csv|doc|docx|exe|flv|gif|gz|jpe?g|js|mp(3|4|e?g)|mov|=
+pdf|phps|png|ppt|rar|sit|tar|torrent|txt|wma|wmv|xls|xlsx|xml|zip";if(typ=
+eof(window.sc_download_type)=3D=3D'string'){dlext=3Dwindow.sc_download_ty=
+pe}var ltype=3D"https?|ftp|telnet|ssh|ssl|mailto";var =
+second=3D"ac|co|gov|ltd|me|mod|net|nic|nhs|org|plc|police|sch|com";var =
+dl=3Dnew RegExp("\\.("+dlext+")$","i");var lnk=3Dnew =
+RegExp("^("+ltype+"):","i");var domsec=3Dnew =
+RegExp("\^("+second+")$","i");var =
+host_name=3Dlocation.host.replace(/^www\./i,"");var =
+host_splitted=3Dhost_name.split(".");var =
+domain=3Dhost_splitted.pop();var =
+host_split=3Dhost_splitted.pop();if(domsec.test(host_split)){domain=3Dhos=
+t_split+"."+domain;host_split=3Dhost_splitted.pop()}domain=3Dhost_split+"=
+."+domain;var =
+lnklocal_mask=3D"^https?:\/\/(.*)("+domain+"|webcache.googleusercontent.c=
+om)";var lnklocal=3Dnew =
+RegExp(lnklocal_mask,"i");if(document.getElementsByTagName){var =
+anchors=3Ddocument.getElementsByTagName('a');for(var =
+i=3D0;i<anchors.length;i++){var =
+anchor=3Danchors[i];if(anchor.onmousedown){var =
+original_click=3Danchor.onmousedown;var =
+s=3Doriginal_click.toString().split("\n").join(" ");var =
+bs=3Ds.indexOf('{');var head=3Ds.substr(0,bs);var =
+ps=3Dhead.indexOf('(');var pe=3Dhead.indexOf(')');var =
+params=3Dhead.substring(ps+1,pe);var plist=3Dparams.split(",");var =
+body=3Ds.substr(bs+1,s.length-bs-2);var =
+insert=3D"sc_clickstat_call(this,'"+sc_click_dir+"');";var =
+final_body=3Dinsert+body;var ev_head=3D"new Function (";var =
+ev_params=3D"";var ev_sep=3D"";for(var =
+sc_i=3D0;sc_i<plist.length;sc_i++){ev_params=3Dev_sep+"'"+plist[sc_i]+"'"=
+;ev_sep=3D","}if(ev_sep=3D=3D","){ev_params+=3D","}var =
+ev_foot=3D"final_body);";var =
+ev_final=3Dev_head+ev_params+ev_foot;anchor.onmousedown=3Deval(ev_final)}=
+else{anchor.onmousedown=3Dnew =
+Function("event","sc_clickstat_call(this,'"+sc_click_dir+"');return =
+true;")}}}function sc_none(){return}function =
+sc_delay(){if(window.sc_click_stat){var =
+d=3Dwindow.sc_click_stat}else{var d=3D250}var n=3Dnew Date();var =
+t=3Dn.getTime()+d;while(n.getTime()<t){var n=3Dnew Date()}}function =
+sc_clickstat_call(adata,sc_click_dir){if(adata){var =
+clickmode=3D0;if(lnk.test(adata)){if((lnklocal.test(adata))){if(dl.test(a=
+data)){clickmode=3D1}else if(window.sc_exit_link_detect&&new =
+RegExp(sc_exit_link_detect,"i").test(adata)){clickmode=3D2}else =
+if(sc_cls=3D=3D2){clickmode=3D2}}else{clickmode=3D2}}if(clickmode!=3D0){v=
+ar sc_link=3Descape(adata);if(sc_link.length>0){var =
+sc_req=3Dsc_click_dir+"click.gif?sc_project=3D"+clickstat_project+"&secur=
+ity=3D"+clickstat_security+"&c=3D"+sc_link+"&m=3D"+clickmode+"&u=3D"+sc_u=
+rl+"&t=3D"+sc_title+"&rand=3D"+Math.random();var sc_req_image=3Dnew =
+Image();sc_req_image.onload=3Dsc_none;sc_req_image.src=3Dsc_req;sc_delay(=
+)}}}}var =
+sc_gsyn_pattern=3D'googlesyndication\.com|ypn-js\.overture\.com|ypn-js\.y=
+sm\.yahoo\.com|googleads\.g\.doubleclick\.net';var =
+sc_gsyn_pattern2=3D'^aswift_[0-9]+$';var sc_px;var sc_py;function =
+sc_adsense_click(sc_data){if(sc_data.src.match(sc_gsyn_pattern)){var =
+sc_link=3Descape(sc_data.src)}else{var sc_link=3Descape("Google Adsense =
+"+sc_data.width+"x"+sc_data.height)}var i=3Dnew Image();var =
+sc_req=3Dsc_click_dir+"click.gif?sc_project=3D"+clickstat_project+"&secur=
+ity=3D"+clickstat_security+"&c=3D"+sc_link+"&m=3D2&u=3D"+sc_url+"&t=3D"+s=
+c_title+"&rand=3D"+Math.random();i.src=3Dsc_req;sc_delay()}function =
+sc_adsense_init(){if(document.all&&typeof =
+window.opera=3D=3D"undefined"){var =
+el=3Ddocument.getElementsByTagName("iframe");for(var =
+i=3D0;i<el.length;i++){if(el[i].src.match(sc_gsyn_pattern)||el[i].id.matc=
+h(sc_gsyn_pattern2)){el[i].onfocus=3Dfunction(){sc_adsense_click(this)}}}=
+}else{if(typeof =
+window.addEventListener!=3D"undefined"){window.addEventListener("unload",=
+sc_exitpage,false);window.addEventListener("mousemove",sc_getmouse,true)}=
+}}if(typeof =
+window.addEventListener!=3D'undefined'){window.addEventListener('load',sc=
+_adsense_init,false)}else{if(typeof =
+document.addEventListener!=3D'undefined'){document.addEventListener('load=
+',sc_adsense_init,false)}else{if(typeof =
+window.attachEvent!=3D'undefined'){window.attachEvent('onload',sc_adsense=
+_init)}else{if(typeof window.onload=3D=3D'function'){var =
+sc_existing=3Donload;window.onload=3Dfunction(){sc_existing();sc_adsense_=
+init()}}else{window.onload=3Dsc_adsense_init}}}}function =
+sc_getmouse(e){if(typeof =
+e.pageX=3D=3D"number"){sc_px=3De.pageX;sc_py=3De.pageY}else{if(typeof =
+e.clientX=3D=3D"number"){sc_px=3De.clientX;sc_py=3De.clientY;if(document.=
+body&&(document.body.scrollLeft||document.body.scrollTop)){sc_px+=3Ddocum=
+ent.body.scrollLeft;sc_py+=3Ddocument.body.scrollTop}else{if(document.doc=
+umentElement&&(document.documentElement.scrollLeft||document.documentElem=
+ent.scrollTop)){sc_px+=3Ddocument.documentElement.scrollLeft;sc_py+=3Ddoc=
+ument.documentElement.scrollTop}}}}}function sc_findy(obj){var =
+y=3D0;while(obj){y+=3Dobj.offsetTop;obj=3Dobj.offsetParent}return(y)}func=
+tion sc_findx(obj){var =
+x=3D0;while(obj){x+=3Dobj.offsetLeft;obj=3Dobj.offsetParent}return(x)}fun=
+ction =
+sc_exitpage(e){ad=3Ddocument.getElementsByTagName("iframe");if(typeof =
+sc_px=3D=3D"undefined"){return}for(var i=3D0;i<ad.length;i++){var =
+adLeft=3Dsc_findx(ad[i]);var adTop=3Dsc_findy(ad[i]);var =
+adW=3DparseInt(adLeft)+parseInt(ad[i].width)+15;var =
+adH=3DparseInt(adTop)+parseInt(ad[i].height)+10;var =
+inFrameX=3D(sc_px>(adLeft-10)&&sc_px<adW);var =
+inFrameY=3D(sc_py>(adTop-10)&&sc_py<adH);if(inFrameY&&inFrameX){if(ad[i].=
+src.match(sc_gsyn_pattern)||ad[i].id.match(sc_gsyn_pattern2)){sc_adsense_=
+click(ad[i])}}}}}}
+------=_NextPart_000_0000_01CCF9F4.D62F1CD0--

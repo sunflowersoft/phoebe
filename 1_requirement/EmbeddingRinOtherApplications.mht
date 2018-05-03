@@ -1,0 +1,371 @@
+From: "Saved by Windows Internet Explorer 9"
+Subject: Embedding R in Other Applications
+Date: Fri, 9 Mar 2012 16:35:43 +0700
+MIME-Version: 1.0
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://developer.r-project.org/embedded.html
+X-MimeOLE: Produced By Microsoft MimeOLE V6.1.7600.16807
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Embedding R in Other Applications</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type><LINK=20
+rel=3Dstylesheet href=3D"Rtech.css">
+<META name=3DGENERATOR content=3D"MSHTML 9.00.8112.16441"></HEAD>
+<BODY>
+<H1>Embedding R in Other Applications</H1><B>This document dates from =
+2000 and=20
+is superseded by the documented interface in `Writing R Extensions'. =
+Other=20
+aspects have also changed, including that there is a embedding interface =
+common=20
+between Unix and Windows.</B>=20
+<P>On Unix, it is possible to compile R as a stand-alone library that =
+can be=20
+linked with or dynamically loaded into other applications. One can then =
+use the=20
+programming interface defined in the <A=20
+href=3D"http://cran.r-project.org/doc/manuals/R-exts.pdf">Writing R =
+Extensions</A>=20
+to evaluate R expressions, call R functions, access the math routines, =
+provide a=20
+well-defined and complete scripting language, etc.=20
+<H2>Motivation</H2>There is little doubt that embedding the R library =
+within a C=20
+routine that acts as a regular shell command is overkill. To do this, =
+one could=20
+execute R in batch mode with a specified script that queried the vector =
+<A=20
+href=3D"http://stat.ethz.ch/R-alpha/library/base/html/commandArgs.html"><=
+CODE=20
+class=3DRfunction>commandArgs()</CODE></A>. If C code is needed, it can =
+be=20
+dynamically loaded into R (possibly with equal or less effort than =
+creating an=20
+embedded application). In this case, the functionality of the =
+application is=20
+achieved without the application being in control. Instead, R is the=20
+"<I>server</I>" in the setup.=20
+<P>Even graphical interfaces which would appear to need to be in control =
+of an=20
+application need not use the embedded R library. Instead, the regular=20
+stand-alone R can be used, again in batch mode, to invoke the R commands =
+to=20
+create the GUI (using either of the <A=20
+href=3D"http://www.omegahat.org/RSJava/index.html">Java</A> or <A=20
+href=3D"http://stat.ethz.ch/R-alpha/library/tcltk/html/00Index.html">TclT=
+k</A>=20
+packages, or coding it directly in C using one of the GUI libraries and=20
+contending with the event loop!).=20
+<P>However, the embedded R mechanism is useful in applications that =
+really must=20
+be in control of initialization and execution. Long running servers are =
+natural=20
+examples. The Postgres and MySQL servers are examples of such =
+applications.=20
+Dynamic, event-driven processing systems that are given data at =
+different times=20
+and update their computations accordingly (e.g. produce new reports and =
+plots,=20
+inventory tracking, user signatures, etc.) are other examples. The =
+Apache server=20
+is another example of where embedding a statistical environment is =
+useful in two=20
+regards. Firstly, the R language can be used to generate pages in the =
+same way=20
+that Perl, PHP, etc. are employed. A simple CGI command that specifies =
+an R=20
+expression that uses the RSDBI package to extract values from a database =
+and=20
+generate a plot (in Postscript, PNG, PDF, SVG, etc.) and return a page=20
+containing that image can be a simple way to produce high-quality =
+graphics=20
+without the overhead of starting R each time.=20
+<P>Not only can servers such as Postgres, MySQL and Apache allow its =
+users to=20
+employ R by embedding it as a module, these systems might also use the=20
+statistical facilities (either native routines or via the interpreted =
+language)=20
+to govern their own behavior. Computing models for transactions so that =
+Apache=20
+can pre-fetch pages for clients or reorganize its own caches to optimize =
+current=20
+activity are natural uses of the modelling code in R. Similarly, =
+Postgres can=20
+tailor its performance by incrementally computing statistics about its =
+own=20
+behavior.=20
+<H2>Test Applications</H2>The initial example that was used to test this =
+setup=20
+was embedding R within Postgres for use as a procedural language. This =
+allows=20
+(privileged) users to define SQL functions as R functions, expressions, =
+etc.=20
+Additionally, tests were done by evaluating R expressions within=20
+<OL>
+  <LI>a simple application that dynamically loaded <CODE=20
+  class=3DsharedLibary>libR.so</CODE>=20
+  <LI>ggobi that is linked against <CODE =
+class=3DsharedLibary>libR.so</CODE> and=20
+  contains a GUI callback. (This is not a very practical example as =
+ggobi can be=20
+  entirely embedded and controlled from within R.) </LI></OL>
+<H2>Linking the R library</H2><PRE class=3DMake>  $(CC) -L$(R_HOME)/bin =
+-lR
+</PRE>
+<H2>Initializing R from within an Application</H2>Currently, the =
+following code=20
+will initialize the R engine. <PRE class=3DC>void initR() {
+ char *argv[] =3D {"REmbeddedPostgres", "--gui=3Dnone", "--silent"};
+ int argc =3D sizeof(argv)/sizeof(argv[0]);
+
+  Rf_initEmbeddedR(argc, argv);
+}
+</PRE>When this is called, the environment variables such as <CODE=20
+class=3DenvironmentVar>R_HOME</CODE>, <CODE =
+class=3DenvironmentVar>R_PROFILE</CODE>,=20
+<CODE class=3DenvironmentVar>R_LIBS</CODE> should be appropriately set. =
+There are=20
+a variety of tools which can help an application read configuration =
+details.=20
+(For example, the C++ properties library in the Omegahat distribution =
+allows one=20
+to read a file containing <CODE>name: value</CODE> pairs. )=20
+<H2>Handling Errors</H2>An application that embeds R must be careful to =
+take=20
+care of handling errors that occur within the R engine appropriately. In =
+the=20
+stand-alone version of R, an error will (after other <CODE=20
+class=3DRfunction>on.error()</CODE> activities in each evaluation frame) =
+return=20
+control to the main input-eval-print loop. In general, this is not what =
+is=20
+desired within another application. Instead, we want to trap such R =
+errors and=20
+handle them from where the application passed control to the R engine.=20
+<P>This can be done most readily using the C routine <CODE=20
+class=3DCroutine>R_tryEval</CODE> to evaluate the S expression. This =
+does exactly=20
+what we want by guaranteeing to return to this point in the calling code =
+whether=20
+an error occurred or not in evaluating the expression. This routine is =
+similar=20
+to <CODE class=3DCroutine>eval</CODE>, taking both the expression to =
+evaluate and=20
+an environment in which to perform the evaluation. It takes a third =
+argument=20
+which is the address of an integer. If this is non-NULL, when the call =
+returns,=20
+this contains a flag indicating whether there was an error or not.=20
+<H3>Example</H3><PRE class=3DC>int
+callFoo()
+{
+ SEXP e, val;
+ int errorOccurred;
+ int result =3D -1;
+
+ PROTECT(e =3D allocVector(LANGSXP, 1));
+ SETCAR(e, Rf_install("foo"));
+
+ val =3D R_tryEval(e, R_GlobalEnv, &amp;errorOccurred);
+
+ if(!errorOccurred) {
+   PROTECT(val);
+   result =3D INTEGER(val)[0];
+   UNPROTECT(1);
+ } else {
+   fprintf(stderr, "An error occurred when calling foo\n");
+   fflush(stderr);
+ }
+
+    /* Assume we have an INTSXP here. */
+
+ UNPROTECT(1); /* e */
+
+return(result);
+}
+</PRE>Note that this will, by default, take care of handling all types =
+of errors=20
+that R would usually handle including signals. So if the user sends an =
+interrupt=20
+to a computation (e.g. using Ctrl-C) while an R expression is being =
+evaluated,=20
+<CODE class=3DCroutine>R_tryEval</CODE> will return and report an error. =
+If the=20
+host application however changes the signal mask and/or handlers from =
+R's own=20
+ones, of course this will not necessarily happen. In other words, the =
+host=20
+application can control the signal handling differently.=20
+<H2>Handling The Event Loop</H2>As we have encountered when integrating =
+other=20
+software into R and handling blocking I/O, software that assumes that it =
+is in=20
+control of waiting for events can be challenging to embed in another=20
+application. So as to not inflict this same problem on others, R should =
+be able=20
+to export the file descriptors on which it is waiting for events and =
+also the=20
+individual callbacks associated with each these file descriptors. It is=20
+inconceivable that we can have a common C-level signature for the =
+callbacks=20
+across different applications (other than those defined by the =
+"standards" -- X,=20
+Gtk, Tk, etc.). Many applications that have an event loop do not admit =
+the=20
+possibility of different sources of events, but instead assume there are =
+only=20
+e.g. user events on a GUI and not on <CODE>stdin</CODE> or other =
+connections.=20
+<H2>Compiling the Library</H2>The library is not compiled automatically =
+during=20
+the installation of <B>R</B>. It can currently be compiled by invoking =
+the=20
+command <PRE>    make ../../bin/libR.so  =20
+</PRE>from within <CODE class=3Ddir>src/main</CODE> under the <B>R</B>=20
+distribution. As indicated, the resulting (shared) library is installed =
+into the=20
+directory <CODE class=3Ddir>bin/</CODE> within the <B>R</B> =
+distribution.=20
+<P><FONT color=3Dred>Note that usually this command will be done after =
+performing=20
+the regular build/installation. Note that that object (i.e. the <CODE=20
+class=3Dextension>.o</CODE>) files will typically have been compiled for =
+linking=20
+into a shared library. Specifically, the will not necessarily contain =
+position=20
+independent code (PIC). Additionally, any files containing code that is=20
+conditionally defined in the context of the embedable shared library =
+(e.g. code=20
+inside <CODE class=3DCPP>#ifdef R_EMBEDDED</CODE>) will need to be =
+recompiled with=20
+the relevant flags. </FONT>
+<H2>Future Directions</H2>It would be ideal to decompose the =
+functionality=20
+provided by the large <CODE class=3DsharedLibrary>libR.so</CODE> into a =
+collection=20
+of sub-libraries. Then users would be able to load just those that were =
+needed=20
+for their applications. For example, continuing Brian's work to make the =
+X11 be=20
+dynamically loadable and provide the Math routines as a stand-alone =
+library, we=20
+might consider providing libraries for the following <I>topics</I>=20
+<DL>
+  <DT>
+  <LI>Parser and abstract syntax tree. </LI>
+  <DD>
+  <DT>
+  <LI>Evaluator. </LI>
+  <DD>
+  <DT>
+  <LI>Graphics. </LI>
+  <DD>
+  <DT>
+  <LI>Modelling. </LI>
+  <DD></DD></DL>
+<H3>Multiple Evaluators</H3>The ability to embed R raises the issue of =
+having=20
+multiple evaluators, multiple threads, multiple users and =
+synchronization of all=20
+of these.=20
+<H2>Examples</H2>This trivial example illustrates how to initialize the =
+R=20
+environment and invoke an expression via the <CODE=20
+class=3DCroutine>eval_R_command()</CODE> <PRE>void
+init_R()
+{
+extern Rf_initEmbeddedR(int argc, char **argv);
+  int argc =3D 1;
+  char *argv[] =3D {"ggobi"};
+
+  Rf_initEmbeddedR(argc, argv);
+}
+
+ /*
+  Calls the equivalent of=20
+    x &lt;- integer(10)
+    for(i in 1:length(x))
+       x[i] &lt;- 1
+    print(x)
+ */
+int
+eval_R_command()
+{
+ SEXP e;
+ SEXP fun;
+ SEXP arg;
+ int i;
+ void init_R(void);
+
+  init_R();
+
+    fun =3D Rf_findFun(Rf_install("print"),  R_GlobalEnv);
+    PROTECT(fun);
+    arg =3D NEW_INTEGER(10);
+    for(i =3D 0; i &lt; GET_LENGTH(arg); i++)
+      INTEGER_DATA(arg)[i]  =3D i + 1;
+    PROTECT(arg);
+
+    e =3D allocVector(LANGSXP, 2);
+    PROTECT(e);
+    SETCAR(e, fun);
+    SETCAR(CDR(e), arg);
+
+      /* Evaluate the call to the R function.
+         Ignore the return value.
+       */
+    eval(e, R_GlobalEnv);
+    UNPROTECT(3);  =20
+  return(0);
+}
+</PRE>
+<H2>Routines for the Embedded R</H2>The following are the routines that =
+are now=20
+visible from the shared library that directly relate to the embedded =
+version of=20
+R and are not in the regular API (i.e. mentioned in <A=20
+href=3D"http://www.r-project.org/doc/manuals/R-exts.pdf">Writing R=20
+Extensions</A>).=20
+<TABLE>
+  <TBODY>
+  <TR align=3Dcenter>
+    <TD><FONT class=3DTD>Routine</CODE></FONT></TD>
+    <TD><FONT class=3DTD>Description</FONT></TD></TR>
+  <TR align=3Dleft>
+    <TH>void <CODE class=3DCroutine>jump_now</CODE>(void)</TH>
+    <TH>Should be overridden by the application loading <CODE=20
+      class=3DsharedLibrary>libR.so</CODE> so as to handle errors in R =
+commands.=20
+      It usually calls <CODE class=3DCroutine>Rf_resetStack()</CODE> and =
+returns=20
+      control to the application. </TH></TR>
+  <TR align=3Dleft>
+    <TH>int <CODE class=3DCroutine>Rf_resetStack</CODE>(int =
+resetTopLevel)</TH>
+    <TH>Resets the R evaluator after an error so that subsequent =
+evaluations=20
+      can proceed appropriately. This should be called with a non-zero =
+argument=20
+      from applications that embed R. </TH></TR>
+  <TR align=3Dleft>
+    <TH>int <CODE class=3DCroutine>Rf_initEmbeddedR</CODE>(int argc, =
+char=20
+    **argv)</TH>
+    <TH>Initializes the R environment, passing the specified strings as =
+if=20
+      they were from the command line. The appropriate environment =
+variables=20
+      should be set before calling this =
+routine.</TH></TR></TBODY></TABLE>
+<HR>
+
+<ADDRESS><A href=3D"http://cm.bell-labs.com/stat/duncan">Duncan Temple =
+Lang</A>=20
+(<A=20
+href=3D"mailto:duncan@research.bell-labs.com">duncan@research.bell-labs.c=
+om</A>)=20
+</ADDRESS><!-- hhmts start -->Last modified: Mon Aug 21 22:43:35 EDT =
+2000 <!-- hhmts end --></BODY></HTML>

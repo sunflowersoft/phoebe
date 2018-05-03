@@ -1,0 +1,11 @@
+1380x1532
+
+Tương quan đa biến, Tương quan ước lượng, Sai số, Sai số phần trăm (%)
+Hồ Thị Thu Hằng, Sherpard, Hadlock, Campbell & Wilkin
+Các số đo chuẩn tắc, Cân nặng đo được (gram), Trung bình cân nặng (gram), Trung bình cân nặng (gram)
+Cân nặng ước lượng (gram), Cân nặng ước lượng (gram), Sai số cân nặng ước lượng (gram), Sai số phần trăm cân nặng ước lượng (%)
+
+Tương quan đa biến, Tương quan ước lượng, Sai số, Sai số phần trăm (%)
+Hồ Thị Thu Hằng, Sherpard, Hadlock, Campbell & Wilkin
+Các số đo chuẩn tắc, Tuổi thai đo được (tuần), Trung bình tuổi thai (tuần), Trung bình tuổi thai (tuần)
+Tuổi thai ước lượng (tuần), Tuổi thai ước lượng (tuần), Sai số tuổi thai ước lượng (tuần), Sai số phần trăm tuổi thai ước lượng (%)
